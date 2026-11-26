@@ -1,0 +1,12 @@
+import test from "node:test";import assert from "node:assert/strict";import {loadRecords,inspect,checkSnapshot} from "./integrated-audit.mjs";
+const d=loadRecords(),result=inspect(d);
+for(const [key,value] of Object.entries(result.checks))test("integrated "+key,()=>assert.equal(value,true));
+test("snapshot content unchanged",()=>assert.equal(checkSnapshot(d),true));
+test("primary identifiers, not independent studies",()=>{assert.equal(result.primaryRecords,73);assert.equal(result.distinctPrimaryIdentifiers,69);assert.deepEqual(result.duplicates.map(g=>g.records).sort(),[["E049","Q05"],["Q01","M01"],["Q02","M02"],["M03","P03"]].sort())});
+test("all ten biological cycles remain open",()=>{assert.equal(result.cycleCount,10);assert.equal(result.openCycles,10)});
+test("cycle drift detected",()=>{const x=structuredClone(d);x["cycles.json"].cycles[0].title="alterado";assert.equal(inspect(x).checks.cycleConsistency,false)});
+test("missing values cannot be replaced with zero",()=>{const x=structuredClone(d);x["quality-results.json"].allMissing.mean=0;assert.equal(inspect(x).checks.missingNotZero,false)});
+test("synthetic mislabel detected",()=>{const x=structuredClone(d);x["synthetic-results.json"].synthetic=false;assert.equal(inspect(x).checks.syntheticLabels,false)});
+test("unresolved mismatch detected",()=>{const x=structuredClone(d);x["research-integrity.json"].unresolved=[];assert.equal(inspect(x).checks.unresolvedConsistency,false)});
+test("identifier drift detected",()=>{const x=structuredClone(d);x["integrity-registry.json"].records[0].url="https://example.com/other";assert.equal(inspect(x).checks.integrityLinks,false)});
+test("unsupported individual validation detected",()=>{const x=structuredClone(d);x["catalog.json"].records[0].clinicalValidation="established";assert.equal(inspect(x).checks.noClinicalClaims,false)});

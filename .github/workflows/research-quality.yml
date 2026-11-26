@@ -21,7 +21,7 @@ jobs:
         with:
           persist-credentials: false
       - run: node --version
-      - run: node --test research-v75/*.test.mjs
+      - run: node --experimental-test-coverage --test research-v75/*.test.mjs
       - run: node --check research-v75/model.mjs
 
       - run: node --check research-v75/lab.mjs
@@ -36,6 +36,7 @@ jobs:
       - run: node --check research-v75/bibliographic-audit.mjs
       - run: node --check research-v75/research-integrity.mjs
       - run: node --check research-v75/snapshot.mjs
+      - run: node --check research-v75/integrated-audit.mjs
   browser:
     runs-on: ubuntu-24.04
     timeout-minutes: 12
