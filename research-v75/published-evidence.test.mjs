@@ -1,0 +1,10 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {countByUnit,validate} from "./published-evidence.mjs";
+const r=JSON.parse(readFileSync(new URL("./published-evidence.json",import.meta.url),"utf8"));
+test("published evidence registry",()=>assert.ok(validate(r)));
+test("B01 sample count and unknown donor count",()=>{assert.equal(countByUnit(r.records[0],"tissue_samples"),1173);assert.equal(countByUnit(r.records[0],"paired_donors"),null)});
+test("B02 distinct biological units",()=>{assert.equal(countByUnit(r.records[1],"tissue_samples"),15);assert.equal(countByUnit(r.records[1],"paired_donors"),5);assert.equal(countByUnit(r.records[1],"nuclei_passing_qc"),121610)});
+test("unknown count unit rejected",()=>assert.throws(()=>countByUnit(r.records[1],"participants")));
+test("clinical inference not established",()=>{const x=structuredClone(r);x.records[1].individualValidation=true;assert.equal(validate(x),false)});
+test("invalid count rejected",()=>{const x=structuredClone(r);x.records[0].counts[0].value=-1;assert.equal(validate(x),false);assert.throws(()=>countByUnit(x.records[0],"tissue_samples"))});
+test("sample count not relabeled as participants",()=>{const x=structuredClone(r);x.records[0].counts[0].unit="participants";assert.equal(validate(x),false)});
+test("source duplicated",()=>{const x=structuredClone(r);x.records[1].url=x.records[0].url;assert.equal(validate(x),false)});
