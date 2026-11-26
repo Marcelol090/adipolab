@@ -27,3 +27,5 @@ jobs:
       - run: node --check research-v75/lab.mjs
 
       - run: node --check research-v75/quality.mjs
+
+      - run: node --check research-v75/review.mjs
