@@ -671,9 +671,12 @@
         "Associação populacional, sem previsão individual."
       ],
       "provenance": [
-        "v83:R24"
+        "v83:R24",
+        "v143:PubMed PMID 35773277"
       ],
-      "cohorts": [],
+      "cohorts": [
+        "UK Biobank"
+      ],
       "access": "metadados herdados",
       "microdata": "not_imported",
       "clinicalValidation": "not_established"

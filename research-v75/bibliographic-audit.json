@@ -1,0 +1,85 @@
+{
+  "version": 143,
+  "scope": "bibliographic_identity_and_cohort_provenance",
+  "audits": [
+    {
+      "id": "E009",
+      "identifier": "DOI:10.1186/s13059-020-02015-1",
+      "url": "https://doi.org/10.1186/s13059-020-02015-1",
+      "access": "publisher_article",
+      "scope": "Método estatístico para integração de dados multimodais; nenhum modelo local treinado.",
+      "identity": "confirmed",
+      "date": "2026-11-26",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "id": "E018",
+      "identifier": "PMCID:PMC7701361",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7701361/",
+      "access": "indexed_record",
+      "scope": "Revisão de integração multiômica centrada em metabolômica; não constitui coorte adiposa independente.",
+      "identity": "confirmed",
+      "date": "2026-11-26",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "id": "E024",
+      "identifier": "PMID:23512827",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23512827/",
+      "access": "indexed_record",
+      "scope": "Identidade bibliográfica confirmada; resultados e tamanho amostral não reextraídos.",
+      "identity": "confirmed",
+      "date": "2026-11-26",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "id": "E031",
+      "identifier": "PMID:35074795",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35074795/",
+      "access": "indexed_record",
+      "scope": "Revisão de segurança e sistema linfático; não permite diagnóstico individual.",
+      "identity": "confirmed",
+      "date": "2026-11-26",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "id": "E033",
+      "identifier": "PMID:35773277",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35773277/",
+      "access": "indexed_record",
+      "scope": "Coorte UK Biobank identificada; possível sobreposição com E015, E017 e E032. Não equivale a participantes independentes.",
+      "identity": "confirmed",
+      "date": "2026-11-26",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "id": "E034",
+      "identifier": "PMID:38729274",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38729274/",
+      "access": "indexed_record",
+      "scope": "Metodologia de validação externa; não valida o AdipoLab.",
+      "identity": "confirmed",
+      "date": "2026-11-26",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "id": "E047",
+      "identifier": "GEO:GSE47512",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47512",
+      "access": "indexed_record_direct_access_blocked",
+      "scope": "Registro identificado no índice; acesso direto bloqueado por CAPTCHA. Arquivos não importados e associação ao estudo pai não reconfirmada integralmente.",
+      "identity": "indexed_only",
+      "date": "2026-11-26",
+      "rawImported": false,
+      "individualValidation": false
+    }
+  ],
+  "individualValidation": false,
+  "personalData": false
+}
