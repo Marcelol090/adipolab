@@ -31,6 +31,7 @@ jobs:
       - run: node --check research-v75/review.mjs
 
       - run: node --check research-v75/integrity.mjs
+      - run: node --check research-v75/provenance.mjs
   browser:
     runs-on: ubuntu-24.04
     timeout-minutes: 12

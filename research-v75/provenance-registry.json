@@ -1,0 +1,100 @@
+{
+  "version": 140,
+  "scope": "measurement methodology and provenance only",
+  "sources": [
+    {
+      "id": "M01",
+      "year": 2025,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40754386/",
+      "title": "Methodological standards for body composition: levels, models, and terminology",
+      "role": "terminology",
+      "limit": "Massa de gordura molecular e tecido adiposo no nível tecido-órgão não são sinônimos."
+    },
+    {
+      "id": "M02",
+      "year": 2026,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41864542/",
+      "title": "Methodological standards for body composition assessment: bioimpedance, DXA, CT and ultrasound methods",
+      "role": "methods",
+      "limit": "Métodos, dispositivos e populações possuem limitações e erros próprios."
+    },
+    {
+      "id": "M03",
+      "year": 2024,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39438968/",
+      "title": "Body composition assessment in individuals with class II/III obesity: a narrative review",
+      "role": "applicability",
+      "limit": "Revisão narrativa de métodos; aplicabilidade depende da pessoa e do equipamento."
+    },
+    {
+      "id": "M04",
+      "year": 2026,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42303133/",
+      "title": "Accuracy, repeatability, and interchangeability of smartphone-based digital anthropometry using multi- and dual-image approaches for body fat estimation",
+      "role": "image_validation",
+      "limit": "57 adultos saudáveis; requer validação e calibração adicionais. Não valida fotografia individual nem composição regional."
+    }
+  ],
+  "methods": [
+    {
+      "method": "tape",
+      "label": "Fita métrica",
+      "supports": [
+        "circumference"
+      ],
+      "limit": "Perímetro não separa tecidos."
+    },
+    {
+      "method": "photo",
+      "label": "Fotografia convencional",
+      "supports": [
+        "appearance"
+      ],
+      "limit": "Contorno qualitativo; não confirma quantidade adiposa ou genótipo."
+    },
+    {
+      "method": "scale",
+      "label": "Balança",
+      "supports": [
+        "total_mass"
+      ],
+      "limit": "Massa total não informa composição."
+    },
+    {
+      "method": "dxa",
+      "label": "DXA",
+      "supports": [
+        "fat_mass_estimate"
+      ],
+      "limit": "Estimativa de composição, não identificação automática de tecido subcutâneo."
+    },
+    {
+      "method": "clinical_mri",
+      "label": "Ressonância com protocolo clínico",
+      "supports": [
+        "adipose_tissue_volume"
+      ],
+      "limit": "Depende de segmentação, adequação e avaliação profissional."
+    },
+    {
+      "method": "clinical_ultrasound",
+      "label": "Ultrassonografia clínica",
+      "supports": [
+        "local_tissue_thickness"
+      ],
+      "limit": "Espessura em ponto de exame não equivale a volume regional."
+    },
+    {
+      "method": "genetic_report",
+      "label": "Laudo genético",
+      "supports": [
+        "reported_genotype"
+      ],
+      "limit": "Interpretação profissional; não prediz isoladamente distribuição corporal."
+    }
+  ],
+  "privateData": "not_collected_or_published",
+  "clinicalValidation": "not_established",
+  "imageFiles": "not_imported",
+  "humanRawData": "not_imported"
+}
