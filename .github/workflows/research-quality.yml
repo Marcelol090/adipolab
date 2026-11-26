@@ -38,6 +38,7 @@ jobs:
       - run: node --check research-v75/snapshot.mjs
       - run: node --check research-v75/integrated-audit.mjs
       - run: node --check research-v75/published-evidence.mjs
+      - run: node --check research-v75/evidence-quality-v160.mjs
   browser:
     runs-on: ubuntu-24.04
     timeout-minutes: 12
