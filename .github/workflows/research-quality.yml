@@ -1,0 +1,25 @@
+name: AdipoLab research quality
+on:
+  pull_request:
+    paths:
+      - 'research-v75/**'
+      - '.github/workflows/research-quality.yml'
+  push:
+    branches: [main, research-v75-observational]
+    paths:
+      - 'research-v75/**'
+      - '.github/workflows/research-quality.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: node --version
+      - run: node --test research-v75/model.test.mjs
+      - run: node --check research-v75/model.mjs
