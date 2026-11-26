@@ -34,6 +34,7 @@ jobs:
       - run: node --check research-v75/provenance.mjs
       - run: node --check research-v75/population-methods.mjs
       - run: node --check research-v75/bibliographic-audit.mjs
+      - run: node --check research-v75/research-integrity.mjs
   browser:
     runs-on: ubuntu-24.04
     timeout-minutes: 12

@@ -1,0 +1,168 @@
+{
+  "version": 144,
+  "scope": "research_integrity_only",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "FAIR",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4792175/",
+      "year": "2016",
+      "role": "data_stewardship",
+      "limit": "Princípios de gestão e reutilização; não são certificação.",
+      "access": "indexed_metadata_and_excerpts",
+      "checkedOn": "2026-11-26",
+      "rawImported": false
+    },
+    {
+      "id": "S02",
+      "title": "W3C PROV",
+      "url": "https://www.w3.org/TR/prov-overview/",
+      "year": "2013",
+      "role": "provenance",
+      "limit": "Modelo de procedência de entidades, atividades e agentes.",
+      "access": "indexed_metadata_and_excerpts",
+      "checkedOn": "2026-11-26",
+      "rawImported": false
+    },
+    {
+      "id": "S03",
+      "title": "PRISMA 2020",
+      "url": "https://www.prisma-statement.org/prisma-2020",
+      "year": "2021",
+      "role": "review_reporting",
+      "limit": "Diretriz de relato; não comprova completude de uma revisão ainda não executada.",
+      "access": "indexed_metadata_and_excerpts",
+      "checkedOn": "2026-11-26",
+      "rawImported": false
+    },
+    {
+      "id": "S04",
+      "title": "Cochrane GRADE",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14",
+      "year": null,
+      "role": "certainty",
+      "limit": "Avaliação por desfecho; não atribuir grau de certeza sem avaliação formal.",
+      "access": "indexed_metadata_and_excerpts",
+      "checkedOn": "2026-11-26",
+      "rawImported": false
+    },
+    {
+      "id": "S05",
+      "title": "TRIPOD+AI",
+      "url": "https://www.bmj.com/content/385/bmj-2023-078378",
+      "year": "2024",
+      "role": "model_reporting",
+      "limit": "Diretriz de relato de modelos, não teste de eficácia.",
+      "access": "indexed_metadata_and_excerpts",
+      "checkedOn": "2026-11-26",
+      "rawImported": false
+    },
+    {
+      "id": "S06",
+      "title": "PROBAST+AI",
+      "url": "https://www.bmj.com/content/388/bmj-2024-082505",
+      "year": "2025",
+      "role": "model_quality",
+      "limit": "Avaliação de qualidade, risco de viés e aplicabilidade.",
+      "access": "indexed_metadata_and_excerpts",
+      "checkedOn": "2026-11-26",
+      "rawImported": false
+    },
+    {
+      "id": "S07",
+      "title": "ClinicalTrials.gov — interpretação de resultados",
+      "url": "https://www.clinicaltrials.gov/study-basics/how-to-read-study-results",
+      "year": null,
+      "role": "results_reporting",
+      "limit": "Registro ou publicação de resultado não constitui validação individual.",
+      "access": "indexed_metadata_and_excerpts",
+      "checkedOn": "2026-11-26",
+      "rawImported": false
+    }
+  ],
+  "reasons": [
+    {
+      "code": "access_blocked",
+      "description": "A fonte não pôde ser consultada diretamente; o conteúdo permanece provisório."
+    },
+    {
+      "code": "not_extracted",
+      "description": "A fonte foi identificada, mas os resultados ainda não foram extraídos."
+    },
+    {
+      "code": "missing_outcome",
+      "description": "O desfecho de interesse não foi documentado."
+    },
+    {
+      "code": "indirect_population",
+      "description": "A população ou o contexto difere da pergunta científica."
+    },
+    {
+      "code": "imprecision",
+      "description": "A incerteza estatística precisa ser avaliada."
+    },
+    {
+      "code": "inconsistency",
+      "description": "Resultados divergentes exigem avaliação da comparabilidade."
+    },
+    {
+      "code": "risk_of_bias",
+      "description": "Limitações no desenho, execução ou análise exigem revisão."
+    },
+    {
+      "code": "publication_bias",
+      "description": "A disponibilidade seletiva de estudos precisa ser avaliada."
+    },
+    {
+      "code": "no_external_validation",
+      "description": "Nenhuma validação externa independente foi demonstrada."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "E047",
+      "reason": "access_blocked",
+      "source": "bibliographic-audit.json",
+      "detail": "Registro identificado no índice; acesso direto bloqueado por CAPTCHA. Arquivos não importados e associação ao estudo pai não reconfirmada integralmente.",
+      "resolved": false
+    }
+  ],
+  "stages": [
+    {
+      "id": "discovery",
+      "status": "completed_for_methodology_sources",
+      "evidence": "S01–S07"
+    },
+    {
+      "id": "full_text_extraction",
+      "status": "not_completed",
+      "evidence": null
+    },
+    {
+      "id": "raw_data_import",
+      "status": "not_completed",
+      "evidence": null
+    },
+    {
+      "id": "formal_certainty_assessment",
+      "status": "not_completed",
+      "evidence": null
+    },
+    {
+      "id": "model_training",
+      "status": "not_completed",
+      "evidence": null
+    },
+    {
+      "id": "external_validation",
+      "status": "not_completed",
+      "evidence": null
+    }
+  ],
+  "reviewedOn": "2026-11-26",
+  "clinicalValidation": "not_established",
+  "personalDataIncluded": false,
+  "modelTrained": false,
+  "rawDataImported": false,
+  "certaintyAssessed": false
+}
