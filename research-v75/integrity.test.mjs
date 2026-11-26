@@ -1,0 +1,12 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {identify,groupSources,endpointKind,assessMetadata} from "./integrity.mjs";
+const read=f=>JSON.parse(readFileSync(new URL(f,import.meta.url),"utf8")),r=read("./integrity-registry.json"),all=[...read("./catalog.json").records,...read("./quality-sources.json").sources];
+test("all records tracked",()=>assert.deepEqual(r.records.map(x=>x.id),all.map(x=>x.id)));
+test("distinct identifiers",()=>{assert.equal(r.groups.length,56);assert.deepEqual(groupSources(r.records),r.groups)});
+test("duplicate group explicit",()=>assert.deepEqual(r.duplicateGroups.map(g=>g.records),[["E049","Q05"]]));
+for(const row of r.records)test("identifier "+row.id,()=>{assert.deepEqual(identify(row.url),row.identity);assert.equal(row.rawImported,false);assert.equal(row.clinicalValidated,false)});
+for(const v of r.verified)test("confirmed metadata "+v.id,()=>{const row=r.records.find(x=>x.id===v.id);assert.equal(row.review,"metadata_confirmed");assert.deepEqual(identify(v.url),row.identity)});
+for(const x of [null,"","http://doi.org/10.1234/a","https://doi.org/foo","https://pubmed.ncbi.nlm.nih.gov/0","https://pmc.ncbi.nlm.nih.gov/articles/foo","https://user:pass@doi.org/10.1234/a"])test("reject "+String(x),()=>assert.equal(identify(x),null));
+test("case normalization",()=>assert.deepEqual(identify("https://doi.org/10.1234/ABC/"),identify("https://doi.org/10.1234/abc")));
+for(const [key,value] of Object.entries({adipose_tissue:"tissue",fat_mass:"composition_estimate",muscle_only:"excluded",circumference:"geometry",body_weight:"total_mass",edema:"fluid",adverse_event:"safety",other:"unknown"}))test("endpoint "+key,()=>assert.equal(endpointKind(key),value));
+for(const role of ["safety","methodology","other"])for(const population of ["human","animal","cell","unknown"])for(const design of ["observational","ex_vivo","unknown"])test("metadata "+role+" "+population+" "+design,()=>assert.equal(assessMetadata({role,population,design}),role==="safety"?"safety_only":role==="methodology"?"method_only":population==="human"&&design==="observational"?"observational_only":population==="animal"||population==="cell"||design==="ex_vivo"?"indirect":"unknown"));
+test("no clinical claim",()=>{assert.equal(r.clinicalVerdict,"not_established");assert.equal(r.rawImported,false)});

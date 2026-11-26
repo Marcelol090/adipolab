@@ -1,0 +1,1077 @@
+{
+  "version": 130,
+  "records": [
+    {
+      "id": "E001",
+      "url": "https://ajcn.nutrition.org/article/S0002-9165%2826%2900092-4/fulltext",
+      "identity": {
+        "kind": "URL",
+        "key": "https://ajcn.nutrition.org/article/S0002-9165%2826%2900092-4/fulltext"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E002",
+      "url": "https://bdtd.ibict.br/vufind/Record/UFPE_2cbcfd02451a5dbf774f062ce1d34691",
+      "identity": {
+        "kind": "URL",
+        "key": "https://bdtd.ibict.br/vufind/Record/UFPE_2cbcfd02451a5dbf774f062ce1d34691"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E003",
+      "url": "https://doi.org/10.1038/s41467-026-75426-6",
+      "identity": {
+        "kind": "DOI",
+        "key": "10.1038/s41467-026-75426-6"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E004",
+      "url": "https://doi.org/10.1038/s41467-026-76065-7",
+      "identity": {
+        "kind": "DOI",
+        "key": "10.1038/s41467-026-76065-7"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E005",
+      "url": "https://doi.org/10.1038/s42255-025-01296-9",
+      "identity": {
+        "kind": "DOI",
+        "key": "10.1038/s42255-025-01296-9"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E006",
+      "url": "https://doi.org/10.1038/s43856-026-01440-w",
+      "identity": {
+        "kind": "DOI",
+        "key": "10.1038/s43856-026-01440-w"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E007",
+      "url": "https://doi.org/10.1146/annurev-nutr-061824-053907",
+      "identity": {
+        "kind": "DOI",
+        "key": "10.1146/annurev-nutr-061824-053907"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E008",
+      "url": "https://doi.org/10.1152/ajpcell.00463.2025",
+      "identity": {
+        "kind": "DOI",
+        "key": "10.1152/ajpcell.00463.2025"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E009",
+      "url": "https://doi.org/10.1186/s13059-020-02015-1",
+      "identity": {
+        "kind": "DOI",
+        "key": "10.1186/s13059-020-02015-1"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E010",
+      "url": "https://doi.org/10.6069/sq0n-1x32",
+      "identity": {
+        "kind": "DOI",
+        "key": "10.6069/sq0n-1x32"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E011",
+      "url": "https://ediss.sub.uni-hamburg.de/handle/ediss/5777",
+      "identity": {
+        "kind": "URL",
+        "key": "https://ediss.sub.uni-hamburg.de/handle/ediss/5777"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E012",
+      "url": "https://etheses.bham.ac.uk/id/eprint/14435",
+      "identity": {
+        "kind": "URL",
+        "key": "https://etheses.bham.ac.uk/id/eprint/14435"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E013",
+      "url": "https://libraetd.lib.virginia.edu/public_view/4b29b666b",
+      "identity": {
+        "kind": "URL",
+        "key": "https://libraetd.lib.virginia.edu/public_view/4b29b666b"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11437900",
+      "identity": {
+        "kind": "PMCID",
+        "key": "PMC11437900"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E015",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13013200",
+      "identity": {
+        "kind": "PMCID",
+        "key": "PMC13013200"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13341497",
+      "identity": {
+        "kind": "PMCID",
+        "key": "PMC13341497"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13526011",
+      "identity": {
+        "kind": "PMCID",
+        "key": "PMC13526011"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7701361",
+      "identity": {
+        "kind": "PMCID",
+        "key": "PMC7701361"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7876417",
+      "identity": {
+        "kind": "PMCID",
+        "key": "PMC7876417"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9761573",
+      "identity": {
+        "kind": "PMCID",
+        "key": "PMC9761573"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9957663",
+      "identity": {
+        "kind": "PMCID",
+        "key": "PMC9957663"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E022",
+      "url": "https://produccioncientifica.ucm.es/documentos/63bc334b3035a915c707ca2b",
+      "identity": {
+        "kind": "URL",
+        "key": "https://produccioncientifica.ucm.es/documentos/63bc334b3035a915c707ca2b"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20713683",
+      "identity": {
+        "kind": "PMID",
+        "key": "20713683"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23512827",
+      "identity": {
+        "kind": "PMID",
+        "key": "23512827"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24105412",
+      "identity": {
+        "kind": "PMID",
+        "key": "24105412"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29738484",
+      "identity": {
+        "kind": "PMID",
+        "key": "29738484"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30477572",
+      "identity": {
+        "kind": "PMID",
+        "key": "30477572"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E028",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31776824",
+      "identity": {
+        "kind": "PMID",
+        "key": "31776824"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E029",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33843278",
+      "identity": {
+        "kind": "PMID",
+        "key": "33843278"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E030",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34394195",
+      "identity": {
+        "kind": "PMID",
+        "key": "34394195"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E031",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35074795",
+      "identity": {
+        "kind": "PMID",
+        "key": "35074795"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E032",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35260612",
+      "identity": {
+        "kind": "PMID",
+        "key": "35260612"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E033",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35773277",
+      "identity": {
+        "kind": "PMID",
+        "key": "35773277"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38729274",
+      "identity": {
+        "kind": "PMID",
+        "key": "38729274"
+      },
+      "review": "metadata_confirmed",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E035",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39141531",
+      "identity": {
+        "kind": "PMID",
+        "key": "39141531"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E036",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40675230",
+      "identity": {
+        "kind": "PMID",
+        "key": "40675230"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E037",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41786761",
+      "identity": {
+        "kind": "PMID",
+        "key": "41786761"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E038",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41840147",
+      "identity": {
+        "kind": "PMID",
+        "key": "41840147"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E039",
+      "url": "https://repositorio.bc.ufg.br/tede/handle/tede/16020",
+      "identity": {
+        "kind": "URL",
+        "key": "https://repositorio.bc.ufg.br/tede/handle/tede/16020"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E040",
+      "url": "https://repositorio.ufes.br/handle/10/5744",
+      "identity": {
+        "kind": "URL",
+        "key": "https://repositorio.ufes.br/handle/10/5744"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E041",
+      "url": "https://repositorio.ufjf.br/jspui/handle/ufjf/18536",
+      "identity": {
+        "kind": "URL",
+        "key": "https://repositorio.ufjf.br/jspui/handle/ufjf/18536"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E042",
+      "url": "https://repositorio.ulisboa.pt/entities/publication/c34070b4-886a-479f-9308-57b76edb6fee",
+      "identity": {
+        "kind": "URL",
+        "key": "https://repositorio.ulisboa.pt/entities/publication/c34070b4-886a-479f-9308-57b76edb6fee"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E043",
+      "url": "https://www.bdtd.ibict.br/vufind/Record/UFRN_ad00cf22eb8a5e4217d007474e9e87af",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.bdtd.ibict.br/vufind/Record/UFRN_ad00cf22eb8a5e4217d007474e9e87af"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E044",
+      "url": "https://www.celltype.info/project/1089",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.celltype.info/project/1089"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E045",
+      "url": "https://www.jstage.jst.go.jp/article/sccj1979/38/2/38_2_125/_article/-char/ja",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.jstage.jst.go.jp/article/sccj1979/38/2/38_2_125/_article/-char/ja"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E046",
+      "url": "https://www.nature.com/articles/s41366-026-02168-2",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.nature.com/articles/s41366-026-02168-2"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E047",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47512",
+      "identity": {
+        "kind": "GEO",
+        "key": "GSE47512"
+      },
+      "review": "metadata_confirmed",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E048",
+      "url": "https://www.nccih.nih.gov/health/providers/digest/herb-drug-interactions",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.nccih.nih.gov/health/providers/digest/herb-drug-interactions"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E049",
+      "url": "https://www.nccih.nih.gov/health/safety",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.nccih.nih.gov/health/safety"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "E050",
+      "url": "https://www.strobe-statement.org",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.strobe-statement.org"
+      },
+      "review": "metadata_confirmed",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "Q01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40754386/",
+      "identity": {
+        "kind": "PMID",
+        "key": "40754386"
+      },
+      "review": "metadata_confirmed",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "Q02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41864542/",
+      "identity": {
+        "kind": "PMID",
+        "key": "41864542"
+      },
+      "review": "metadata_confirmed",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "Q03",
+      "url": "https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1822659/full",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1822659/full"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "Q04",
+      "url": "https://www.fda.gov/drugs/fda-adverse-event-monitoring-system-aems/fda-adverse-event-monitoring-system-aems-public-dashboard",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.fda.gov/drugs/fda-adverse-event-monitoring-system-aems/fda-adverse-event-monitoring-system-aems-public-dashboard"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "Q05",
+      "url": "https://www.nccih.nih.gov/health/safety",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.nccih.nih.gov/health/safety"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "Q06",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-08",
+      "identity": {
+        "kind": "URL",
+        "key": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-08"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    },
+    {
+      "id": "Q07",
+      "url": "https://book.gradepro.org/guideline/principles-for-assessing-the-certainty-of-interventions",
+      "identity": {
+        "kind": "URL",
+        "key": "https://book.gradepro.org/guideline/principles-for-assessing-the-certainty-of-interventions"
+      },
+      "review": "not_rechecked",
+      "rawImported": false,
+      "clinicalValidated": false
+    }
+  ],
+  "groups": [
+    {
+      "kind": "URL",
+      "key": "https://ajcn.nutrition.org/article/S0002-9165%2826%2900092-4/fulltext",
+      "records": [
+        "E001"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://bdtd.ibict.br/vufind/Record/UFPE_2cbcfd02451a5dbf774f062ce1d34691",
+      "records": [
+        "E002"
+      ]
+    },
+    {
+      "kind": "DOI",
+      "key": "10.1038/s41467-026-75426-6",
+      "records": [
+        "E003"
+      ]
+    },
+    {
+      "kind": "DOI",
+      "key": "10.1038/s41467-026-76065-7",
+      "records": [
+        "E004"
+      ]
+    },
+    {
+      "kind": "DOI",
+      "key": "10.1038/s42255-025-01296-9",
+      "records": [
+        "E005"
+      ]
+    },
+    {
+      "kind": "DOI",
+      "key": "10.1038/s43856-026-01440-w",
+      "records": [
+        "E006"
+      ]
+    },
+    {
+      "kind": "DOI",
+      "key": "10.1146/annurev-nutr-061824-053907",
+      "records": [
+        "E007"
+      ]
+    },
+    {
+      "kind": "DOI",
+      "key": "10.1152/ajpcell.00463.2025",
+      "records": [
+        "E008"
+      ]
+    },
+    {
+      "kind": "DOI",
+      "key": "10.1186/s13059-020-02015-1",
+      "records": [
+        "E009"
+      ]
+    },
+    {
+      "kind": "DOI",
+      "key": "10.6069/sq0n-1x32",
+      "records": [
+        "E010"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://ediss.sub.uni-hamburg.de/handle/ediss/5777",
+      "records": [
+        "E011"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://etheses.bham.ac.uk/id/eprint/14435",
+      "records": [
+        "E012"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://libraetd.lib.virginia.edu/public_view/4b29b666b",
+      "records": [
+        "E013"
+      ]
+    },
+    {
+      "kind": "PMCID",
+      "key": "PMC11437900",
+      "records": [
+        "E014"
+      ]
+    },
+    {
+      "kind": "PMCID",
+      "key": "PMC13013200",
+      "records": [
+        "E015"
+      ]
+    },
+    {
+      "kind": "PMCID",
+      "key": "PMC13341497",
+      "records": [
+        "E016"
+      ]
+    },
+    {
+      "kind": "PMCID",
+      "key": "PMC13526011",
+      "records": [
+        "E017"
+      ]
+    },
+    {
+      "kind": "PMCID",
+      "key": "PMC7701361",
+      "records": [
+        "E018"
+      ]
+    },
+    {
+      "kind": "PMCID",
+      "key": "PMC7876417",
+      "records": [
+        "E019"
+      ]
+    },
+    {
+      "kind": "PMCID",
+      "key": "PMC9761573",
+      "records": [
+        "E020"
+      ]
+    },
+    {
+      "kind": "PMCID",
+      "key": "PMC9957663",
+      "records": [
+        "E021"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://produccioncientifica.ucm.es/documentos/63bc334b3035a915c707ca2b",
+      "records": [
+        "E022"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "20713683",
+      "records": [
+        "E023"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "23512827",
+      "records": [
+        "E024"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "24105412",
+      "records": [
+        "E025"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "29738484",
+      "records": [
+        "E026"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "30477572",
+      "records": [
+        "E027"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "31776824",
+      "records": [
+        "E028"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "33843278",
+      "records": [
+        "E029"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "34394195",
+      "records": [
+        "E030"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "35074795",
+      "records": [
+        "E031"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "35260612",
+      "records": [
+        "E032"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "35773277",
+      "records": [
+        "E033"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "38729274",
+      "records": [
+        "E034"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "39141531",
+      "records": [
+        "E035"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "40675230",
+      "records": [
+        "E036"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "41786761",
+      "records": [
+        "E037"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "41840147",
+      "records": [
+        "E038"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://repositorio.bc.ufg.br/tede/handle/tede/16020",
+      "records": [
+        "E039"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://repositorio.ufes.br/handle/10/5744",
+      "records": [
+        "E040"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://repositorio.ufjf.br/jspui/handle/ufjf/18536",
+      "records": [
+        "E041"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://repositorio.ulisboa.pt/entities/publication/c34070b4-886a-479f-9308-57b76edb6fee",
+      "records": [
+        "E042"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.bdtd.ibict.br/vufind/Record/UFRN_ad00cf22eb8a5e4217d007474e9e87af",
+      "records": [
+        "E043"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.celltype.info/project/1089",
+      "records": [
+        "E044"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.jstage.jst.go.jp/article/sccj1979/38/2/38_2_125/_article/-char/ja",
+      "records": [
+        "E045"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.nature.com/articles/s41366-026-02168-2",
+      "records": [
+        "E046"
+      ]
+    },
+    {
+      "kind": "GEO",
+      "key": "GSE47512",
+      "records": [
+        "E047"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.nccih.nih.gov/health/providers/digest/herb-drug-interactions",
+      "records": [
+        "E048"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.nccih.nih.gov/health/safety",
+      "records": [
+        "E049",
+        "Q05"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.strobe-statement.org",
+      "records": [
+        "E050"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "40754386",
+      "records": [
+        "Q01"
+      ]
+    },
+    {
+      "kind": "PMID",
+      "key": "41864542",
+      "records": [
+        "Q02"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1822659/full",
+      "records": [
+        "Q03"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.fda.gov/drugs/fda-adverse-event-monitoring-system-aems/fda-adverse-event-monitoring-system-aems-public-dashboard",
+      "records": [
+        "Q04"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-08",
+      "records": [
+        "Q06"
+      ]
+    },
+    {
+      "kind": "URL",
+      "key": "https://book.gradepro.org/guideline/principles-for-assessing-the-certainty-of-interventions",
+      "records": [
+        "Q07"
+      ]
+    }
+  ],
+  "verified": [
+    {
+      "id": "Q01",
+      "status": "metadata_confirmed",
+      "title": "Methodological standards for body composition: levels, models, and terminology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40754386/",
+      "scope": "Identificador e tema confirmados; não valida uma intervenção."
+    },
+    {
+      "id": "Q02",
+      "status": "metadata_confirmed",
+      "title": "Methodological standards for body composition assessment",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41864542/",
+      "scope": "Guia de avaliação instrumental; não estabelece resposta individual."
+    },
+    {
+      "id": "E034",
+      "status": "metadata_confirmed",
+      "title": "Don't be misled: 3 misconceptions about external validation of clinical prediction models",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38729274/",
+      "scope": "Validação externa de modelos; não valida o AdipoLab."
+    },
+    {
+      "id": "E047",
+      "status": "metadata_confirmed",
+      "title": "GEO series GSE47512",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47512",
+      "scope": "Registro localizado no NCBI; arquivos e amostras não importados."
+    },
+    {
+      "id": "E050",
+      "status": "metadata_confirmed",
+      "title": "STROBE Statement",
+      "url": "https://www.strobe-statement.org/",
+      "scope": "Diretriz de relato observacional; não certifica causalidade."
+    }
+  ],
+  "duplicateGroups": [
+    {
+      "kind": "URL",
+      "key": "https://www.nccih.nih.gov/health/safety",
+      "records": [
+        "E049",
+        "Q05"
+      ]
+    }
+  ],
+  "sourceIdentityNote": "Exact identifier grouping only; does not resolve all DOI/PMID/PMCID aliases.",
+  "clinicalVerdict": "not_established",
+  "rawImported": false
+}

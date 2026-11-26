@@ -29,3 +29,15 @@ jobs:
       - run: node --check research-v75/quality.mjs
 
       - run: node --check research-v75/review.mjs
+
+      - run: node --check research-v75/integrity.mjs
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.1
+      - run: npx --no-install playwright install --with-deps chromium
+      - run: node research-v75/browser-smoke.mjs

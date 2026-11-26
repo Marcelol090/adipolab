@@ -1,0 +1,3 @@
+# v121–v130 — integridade e interface
+
+57 registros; 56 identificadores por igualdade sintática, um duplicado explícito. Cinco registros de metadados reconfirmados em 26/11/2026 (PubMed, GEO, STROBE). Demais registros não reconfirmados. A equivalência entre diferentes identificadores de um mesmo artigo continua incompleta. Nenhum microdado importado. Classificação de desfechos e população baseada em metadados, sem atribuir eficácia ou recomendações. Playwright verifica a interface observacional em três viewports, sem enviar dados ou desbloquear o aplicativo original. Resultados do CI devem ser consultados antes de declarar aprovação.
