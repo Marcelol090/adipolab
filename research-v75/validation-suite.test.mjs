@@ -1,0 +1,14 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {audit} from "./validation-suite.mjs";
+const read=f=>JSON.parse(readFileSync(new URL("./"+f,import.meta.url),"utf8")),r=read("validation-suite.json"),a=audit(r),b=read("published-evidence.json").records.find(x=>x.id==="B02"),q=read("evidence-quality-v160.json").records.find(x=>x.version===153);
+test("aggregate source checks",()=>{assert.equal(a.passed,5);assert.equal(a.total,5)});
+test("biological counts agree with prior extraction",()=>{assert.equal(a.metrics.nuclei,b.counts.filter(x=>x.unit==="nuclei_passing_qc").reduce((s,x)=>s+x.value,0));assert.equal(a.metrics.tissueSamples,b.counts.filter(x=>x.unit==="tissue_samples").reduce((s,x)=>s+x.value,0))});
+test("chemical counts agree with prior extraction",()=>{assert.equal(a.metrics.analytes,q.measurements.find(x=>x.name==="metabólitos no painel").value);assert.equal(a.metrics.analytesMissing,q.measurements.find(x=>x.name==="CV não calculável por dados ausentes").value)});
+test("missingness and denominators",()=>{assert.equal(a.metrics.missingPercent,100*5/189);assert.equal(a.metrics.below20AllPercent,100*160/189);assert.equal(a.metrics.below20ObservedPercent,100*160/184)});
+test("proportional bias not clinical prediction",()=>{assert.equal(a.metrics.proportionalBiasPercent,75);assert.equal(a.clinicalValidation,"not_established")});
+test("inconsistent counts flagged",()=>{const x=structuredClone(r);x.records[1].data.unavailable=0;assert.equal(audit(x).passed,4)});
+test("inconsistent paired samples flagged",()=>{const x=structuredClone(r);x.records[0].data.pairedSamples=4;assert.equal(audit(x).passed,4)});
+test("unsupported individual accuracy flagged",()=>{const x=structuredClone(r);x.records[2].data.reportedIndividualAccuracy=true;assert.equal(audit(x).passed,4)});
+test("negative count rejected",()=>{const x=structuredClone(r);x.records[0].data.subcutaneousNuclei=-1;assert.throws(()=>audit(x))});
+test("unperformed physical experiments not declared complete",()=>{const x=structuredClone(r);x.physicalExperimentsPerformed=true;assert.throws(()=>audit(x))});
+test("unavailable data not declared complete",()=>{const x=structuredClone(r);x.requirements[0].status="complete";assert.throws(()=>audit(x))});
+test("no source without location",()=>{const x=structuredClone(r);x.records[0].locator="";assert.throws(()=>audit(x))});

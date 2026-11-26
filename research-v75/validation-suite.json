@@ -1,0 +1,103 @@
+{
+  "version": 162,
+  "scope": "published_aggregate_measurement_quality",
+  "reviewedOn": "2026-11-26",
+  "records": [
+    {
+      "id": "BIO01",
+      "domain": "biology",
+      "title": "Consistência das unidades de amostragem",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11821520/",
+      "locator": "Results: Human fat depot-specific adipocyte atlases; Fig. 1",
+      "access": "full_text_section",
+      "data": {
+        "pairedSamples": 5,
+        "additionalVisceralSamples": 5,
+        "subcutaneousSamples": 5,
+        "visceralSamples": 10,
+        "totalSamples": 15,
+        "subcutaneousNuclei": 37879,
+        "visceralNuclei": 83731
+      },
+      "limitation": "Contagens publicadas; não são observações independentes por núcleo. Não houve acesso a matrizes individuais nem validação de efeitos."
+    },
+    {
+      "id": "CHEM01",
+      "domain": "chemistry",
+      "title": "Completude e precisão do painel analítico",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6317696/",
+      "locator": "Results: inter-laboratory precision; Table 1; Figure 3",
+      "access": "indexed_full_text_excerpt",
+      "data": {
+        "totalAnalytes": 189,
+        "below20": 160,
+        "above20": 24,
+        "unavailable": 5,
+        "medianCV": 7.6
+      },
+      "limitation": "Desempenho do painel publicado após normalização; o limiar de CV pertence a este estudo, não é critério universal de segurança ou eficácia."
+    },
+    {
+      "id": "PHYS01",
+      "domain": "physiology",
+      "title": "Viés de equações de composição corporal",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41495320/",
+      "locator": "Abstract: Results and Conclusions",
+      "access": "indexed_abstract",
+      "data": {
+        "equations": 16,
+        "proportionalBias": 12,
+        "reportedIndividualAccuracy": false
+      },
+      "limitation": "Resultado de comparação de métodos, não uma validação fisiológica individual. Não estima medidas futuras nem resposta a exposições."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R01",
+      "domain": "biology",
+      "name": "Dados originais e unidades de análise",
+      "status": "not_available",
+      "required": "Matrizes autorizadas, identificação de unidades biológicas, metadados e revisão independente."
+    },
+    {
+      "id": "R02",
+      "domain": "chemistry",
+      "name": "Validação analítica independente",
+      "status": "not_performed",
+      "required": "Documentação de identidade, método, controles, incerteza e revisão por laboratório qualificado."
+    },
+    {
+      "id": "R03",
+      "domain": "physiology",
+      "name": "Validação clínica",
+      "status": "not_performed",
+      "required": "Dados de avaliação clínica consentida, instrumentos apropriados e avaliação profissional independente."
+    },
+    {
+      "id": "R04",
+      "domain": "all",
+      "name": "Reprodução de resultados publicados",
+      "status": "not_performed",
+      "required": "Dados brutos, código original, versões e ambiente reproduzível."
+    },
+    {
+      "id": "R05",
+      "domain": "all",
+      "name": "Revisão de segurança e ética",
+      "status": "not_performed",
+      "required": "Avaliação profissional e ética aplicável antes de qualquer pesquisa com pessoas ou amostras."
+    }
+  ],
+  "methodology": [
+    {
+      "title": "OECD GIVIMP 2025",
+      "url": "https://www.oecd.org/en/publications/guidance-document-on-good-in-vitro-method-practices-givimp-second-edition_5ba6777b-en.html",
+      "role": "quality_guidance_only"
+    }
+  ],
+  "rawDataImported": false,
+  "personalDataIncluded": false,
+  "physicalExperimentsPerformed": false,
+  "clinicalValidation": "not_established"
+}

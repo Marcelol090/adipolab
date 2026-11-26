@@ -41,6 +41,8 @@ jobs:
       - run: node --check research-v75/evidence-quality-v160.mjs
       - run: node --check research-v75/evidence-dashboard.mjs
       - run: node --check research-v75/evidence-dashboard-ui.mjs
+      - run: node --check research-v75/validation-suite-ui.mjs
+      - run: node research-v75/run-validation-suite.mjs
   browser:
     runs-on: ubuntu-24.04
     timeout-minutes: 12
