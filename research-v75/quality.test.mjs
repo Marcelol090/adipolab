@@ -1,0 +1,14 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {classify,missing,scenario,auditSource} from "./quality.mjs";
+const read=f=>JSON.parse(readFileSync(new URL(f,import.meta.url),"utf8"));
+for(const domain of ["nutrition","pharmacology","substances","adipose_biology"])for(const outcome of ["muscle_only","adipose_tissue","fat_mass","weight","circumference","edema","unknown"])for(const population of ["human","animal","cell","unknown"])test(domain+" "+outcome+" "+population,()=>{const expected=outcome==="muscle_only"?"excluded_muscle_only":!["adipose_tissue","fat_mass"].includes(outcome)?"unresolved":population==="human"?"descriptive_only":"indirect";assert.equal(classify({domain,outcome,population}),expected)});
+test("safety reports are safety only",()=>assert.equal(classify({domain:"safety",outcome:"adipose_tissue",population:"human"}),"safety_only"));
+test("method only",()=>assert.equal(classify({domain:"methodology"}),"method_only"));
+test("unknown metadata",()=>assert.equal(classify(null),"unresolved"));
+test("source registry",()=>{const r=read("./quality-sources.json");assert.equal(r.version,110);assert.equal(new Set(r.sources.map(s=>s.id)).size,r.sources.length);assert.ok(r.sources.every(s=>auditSource(s)&&s.screening===classify(s)))});
+test("false clinical validation rejected",()=>assert.equal(auditSource({...read("./quality-sources.json").sources[0],clinicalValidated:true}),false));
+test("missing source rejected",()=>assert.equal(auditSource({}),false));
+test("missingness reproducibility",()=>assert.deepEqual(scenario(),read("./quality-results.json")));
+test("selective missingness",()=>{const s=scenario();assert.equal(s.complete.mean,4.5);assert.equal(s.selectiveMissingness.mean,3);assert.equal(s.selectiveMissingness.missing,300)});
+test("all missing remains null",()=>assert.equal(missing([null,null]).mean,null));
+test("zero not missing",()=>assert.deepEqual(missing([0,null]),{n:2,observed:1,missing:1,mean:0}));
+for(const x of [[],["3"],[NaN],[Infinity],null])test("invalid sample "+String(x),()=>assert.throws(()=>missing(x)));

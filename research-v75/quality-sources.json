@@ -1,0 +1,96 @@
+{
+  "version": 110,
+  "scope": "adipose research and pharmacovigilance methodology",
+  "sources": [
+    {
+      "id": "Q01",
+      "title": "Terminologia de composição corporal (2025)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40754386/",
+      "domain": "methodology",
+      "outcome": "composition",
+      "population": "human",
+      "limitation": "Massa de gordura e tecido adiposo são níveis distintos de composição.",
+      "rawImported": false,
+      "clinicalValidated": false,
+      "screening": "method_only"
+    },
+    {
+      "id": "Q02",
+      "title": "Métodos de composição corporal (2026)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41864542/",
+      "domain": "methodology",
+      "outcome": "composition",
+      "population": "human",
+      "limitation": "Modalidades não são intercambiáveis sem validação.",
+      "rawImported": false,
+      "clinicalValidated": false,
+      "screening": "method_only"
+    },
+    {
+      "id": "Q03",
+      "title": "Distribuição adiposa em doença metabólica (2026)",
+      "url": "https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1822659/full",
+      "domain": "adipose_biology",
+      "outcome": "adipose_tissue",
+      "population": "human",
+      "limitation": "Revisão; não estabelece resposta individual nem intervenção seletiva.",
+      "rawImported": false,
+      "clinicalValidated": false,
+      "screening": "descriptive_only"
+    },
+    {
+      "id": "Q04",
+      "title": "FDA AEMS — vigilância de eventos adversos",
+      "url": "https://www.fda.gov/drugs/fda-adverse-event-monitoring-system-aems/fda-adverse-event-monitoring-system-aems-public-dashboard",
+      "domain": "safety",
+      "outcome": "adverse_event",
+      "population": "human",
+      "limitation": "Relatos espontâneos não estabelecem causalidade nem incidência.",
+      "rawImported": false,
+      "clinicalValidated": false,
+      "screening": "safety_only"
+    },
+    {
+      "id": "Q05",
+      "title": "NCCIH — segurança de produtos complementares",
+      "url": "https://www.nccih.nih.gov/health/safety",
+      "domain": "safety",
+      "outcome": "adverse_event",
+      "population": "human",
+      "limitation": "Disponibilidade comercial não comprova eficácia ou segurança.",
+      "rawImported": false,
+      "clinicalValidated": false,
+      "screening": "safety_only"
+    },
+    {
+      "id": "Q06",
+      "title": "Cochrane — risco de viés e dados ausentes",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-08",
+      "domain": "methodology",
+      "outcome": "bias",
+      "population": "human",
+      "limitation": "Avaliação depende de dados e razões de ausência efetivamente relatados.",
+      "rawImported": false,
+      "clinicalValidated": false,
+      "screening": "method_only"
+    },
+    {
+      "id": "Q07",
+      "title": "GRADE — certeza da evidência",
+      "url": "https://book.gradepro.org/guideline/principles-for-assessing-the-certainty-of-interventions",
+      "domain": "methodology",
+      "outcome": "bias",
+      "population": "human",
+      "limitation": "Não atribuir certeza automaticamente; requer avaliação por desfecho.",
+      "rawImported": false,
+      "clinicalValidated": false,
+      "screening": "method_only"
+    }
+  ],
+  "limitations": [
+    "Metadata screen only; not systematic full-text review",
+    "No intervention ranking, dose, combination, prescription or individual target",
+    "No human raw data imported",
+    "Muscle-only outcomes excluded as adipose evidence"
+  ]
+}

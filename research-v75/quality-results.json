@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "units": "arbitrary",
+  "complete": {
+    "n": 1000,
+    "observed": 1000,
+    "missing": 0,
+    "mean": 4.5
+  },
+  "selectiveMissingness": {
+    "n": 1000,
+    "observed": 700,
+    "missing": 300,
+    "mean": 3
+  },
+  "allMissing": {
+    "n": 2,
+    "observed": 0,
+    "missing": 2,
+    "mean": null
+  }
+}
