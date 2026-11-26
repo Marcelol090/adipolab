@@ -1,0 +1,72 @@
+{
+  "version": 141,
+  "scope": "measurement_method_literature",
+  "studies": [
+    {
+      "id": "P01",
+      "year": 2023,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40099116/",
+      "population": "104 adultas com obesidade grau III, amostra clínica UFRJ",
+      "n": 104,
+      "unit": "participants",
+      "design": "cross_sectional",
+      "method": "bioimpedance",
+      "role": "measurement_method",
+      "limit": "Amostra de conveniência; comparação de estimativas de composição global; não quantifica depósitos regionais por ressonância.",
+      "access": "indexed_abstract_and_excerpt",
+      "rawDataImported": false,
+      "individualValidation": false,
+      "causalEvidence": false
+    },
+    {
+      "id": "P02",
+      "year": 2022,
+      "url": "https://doi.org/10.1002/oby.23415",
+      "population": "36 mulheres em contexto de cirurgia bariátrica",
+      "n": 36,
+      "unit": "participants",
+      "design": "longitudinal_method_comparison",
+      "method": "DXA_MRI",
+      "role": "measurement_method",
+      "limit": "Validade de estimativas de gordura visceral; contexto cirúrgico; não valida outros depósitos ou alterações em outras populações.",
+      "access": "indexed_abstract_and_excerpt",
+      "rawDataImported": false,
+      "individualValidation": false,
+      "causalEvidence": false
+    },
+    {
+      "id": "P03",
+      "year": 2024,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39438968/",
+      "population": "Adultos com obesidade classes II e III",
+      "n": null,
+      "unit": null,
+      "design": "narrative_review",
+      "method": "multiple",
+      "role": "measurement_method",
+      "limit": "Revisão narrativa; capacidade e validade dependem da modalidade e do equipamento.",
+      "access": "indexed_abstract",
+      "rawDataImported": false,
+      "individualValidation": false,
+      "causalEvidence": false
+    },
+    {
+      "id": "P04",
+      "year": 2016,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27591783/",
+      "population": "Adultos com obesidade classes II e III",
+      "n": 12,
+      "unit": "studies",
+      "design": "review",
+      "method": "BIA_DXA",
+      "role": "measurement_method",
+      "limit": "Contagem de estudos, não participantes; hidratação, capacidade, posicionamento e penetração limitam os instrumentos.",
+      "access": "pubmed_abstract",
+      "rawDataImported": false,
+      "individualValidation": false,
+      "causalEvidence": false
+    }
+  ],
+  "personalDataIncluded": false,
+  "clinicalVerdict": "not_established"
+}

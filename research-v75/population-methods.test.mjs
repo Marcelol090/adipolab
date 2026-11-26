@@ -1,0 +1,5 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {validateRegistry} from "./population-methods.mjs";
+const r=JSON.parse(readFileSync(new URL("./population-methods.json",import.meta.url),"utf8"));
+test("registry",()=>assert.ok(validateRegistry(r)));
+for(const [name,mutate] of [["personal data",x=>x.personalDataIncluded=true],["clinical claim",x=>x.clinicalVerdict="established"],["causal claim",x=>x.studies[0].causalEvidence=true],["unverified individual result",x=>x.studies[0].individualValidation=true],["raw data claim",x=>x.studies[0].rawDataImported=true],["duplicate",x=>x.studies.push(x.studies[0])],["wrong review unit",x=>x.studies[3].unit="participants"],["missing count",x=>x.studies[0].n=null],["unsafe URL",x=>x.studies[0].url="javascript:alert(1)"]])test("reject "+name,()=>{const x=structuredClone(r);mutate(x);assert.equal(validateRegistry(x),false)});
+test("missing data not zero",()=>assert.equal(r.studies[2].n,null));
