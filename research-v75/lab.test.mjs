@@ -1,7 +1,12 @@
 import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {mean,variance,agreement,rng,coverage,confounding,run,checkRegistry} from "./lab.mjs";
 const read=n=>JSON.parse(readFileSync(new URL(n,import.meta.url),"utf8"));
 test("registry",()=>assert.ok(checkRegistry(read("./cycles.json"))));
-test("snapshot reproducible",()=>assert.deepEqual(run(),read("./synthetic-results.json")));
+function compareSnapshot(a,b,key="root"){if(typeof b==="number"){assert.equal(typeof a,"number",key);if(Number.isInteger(b))assert.equal(a,b,key);else assert.ok(Number.isFinite(a)&&Math.abs(a-b)<=1e-12*Math.max(1,Math.abs(b)),key);return}if(b===null||typeof b!=="object"){assert.equal(a,b,key);return}assert.ok(a!==null&&typeof a==="object",key);assert.equal(Array.isArray(a),Array.isArray(b),key);assert.deepEqual(Object.keys(a).sort(),Object.keys(b).sort(),key);for(const k of Object.keys(b))compareSnapshot(a[k],b[k],key+"."+k)}
+test("snapshot reproducible across JS engines",()=>compareSnapshot(run(),read("./synthetic-results.json")));
+test("snapshot tolerance detects meaningful drift",()=>assert.throws(()=>compareSnapshot({value:0.0101},{value:0.0102})));
+test("snapshot counts exact",()=>assert.throws(()=>compareSnapshot({count:2001},{count:2000})));
+test("snapshot rejects missing field",()=>assert.throws(()=>compareSnapshot({},{count:2000})));
+test("snapshot rejects NaN",()=>assert.throws(()=>compareSnapshot({value:NaN},{value:0.0101})));
 test("identical instruments",()=>assert.equal(agreement([1,2],[1,2]).bias,0));
 test("fixed offset",()=>assert.deepEqual(agreement([1,2],[6,7]),{n:2,bias:5,sd:0,lower:5,upper:5}));
 test("variable error",()=>{const a=agreement([1,2,3,4],[0,3,2,5]);assert.equal(a.bias,0);assert.ok(a.lower<0&&a.upper>0)});
