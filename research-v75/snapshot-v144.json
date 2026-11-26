@@ -1,0 +1,91 @@
+{
+  "version": 145,
+  "baselineCommit": "0a2bf8ed3776396d4b2855ebc51ebec5b4787d26",
+  "checkedOn": "2026-11-26",
+  "scope": "public research records only",
+  "algorithm": "Git blob SHA-1 (content identity, not clinical evidence or security certification)",
+  "source": {
+    "url": "https://www.w3.org/TR/prov-dm/",
+    "role": "provenance concept reference"
+  },
+  "records": [
+    {
+      "file": "bibliographic-audit.json",
+      "gitBlobSha1": "6ee7e4afa147c369c849e3ef0b4f4b21961eb305",
+      "bytes": 3063,
+      "role": "bibliographic_review"
+    },
+    {
+      "file": "catalog.json",
+      "gitBlobSha1": "c45e221de5b7084249985042b307f80ceb4fdd52",
+      "bytes": 29527,
+      "role": "bibliographic_metadata"
+    },
+    {
+      "file": "cycles.json",
+      "gitBlobSha1": "9d2ba74a4d1c765f987b863a94212e89bf5aa317",
+      "bytes": 4486,
+      "role": "research_plan"
+    },
+    {
+      "file": "integrity-registry.json",
+      "gitBlobSha1": "0e14dd39c5fc3d8fa61981de8ac040c539262591",
+      "bytes": 25898,
+      "role": "identifier_metadata"
+    },
+    {
+      "file": "population-methods.json",
+      "gitBlobSha1": "6ba41b58eb1e4740da1fa6073f51d0ca11a59f70",
+      "bytes": 3332,
+      "role": "methodology_metadata"
+    },
+    {
+      "file": "provenance-registry.json",
+      "gitBlobSha1": "1173c70fa8cf4203f83ccd131f1dd8ccaa8e5ff4",
+      "bytes": 3266,
+      "role": "methodology_metadata"
+    },
+    {
+      "file": "quality-results.json",
+      "gitBlobSha1": "42a3b48234f9e249ffc6acf9a984d6dc6090f7a1",
+      "bytes": 332,
+      "role": "synthetic_results"
+    },
+    {
+      "file": "quality-sources.json",
+      "gitBlobSha1": "fe72b117ed06339a4d433a1810d9cc2ebbe0ebbe",
+      "bytes": 3598,
+      "role": "methodology_metadata"
+    },
+    {
+      "file": "research-integrity.json",
+      "gitBlobSha1": "a38d2a0a1112c055678d5fb3e2a9b030faa8f6ec",
+      "bytes": 5153,
+      "role": "research_integrity_metadata"
+    },
+    {
+      "file": "review-registry.json",
+      "gitBlobSha1": "ab84d856e298b7451f357378bbb9f0c76ebbb4b6",
+      "bytes": 6624,
+      "role": "review_metadata"
+    },
+    {
+      "file": "synthetic-results.json",
+      "gitBlobSha1": "fd89141246f52712ac261e487cef9e6d52666baf",
+      "bytes": 868,
+      "role": "synthetic_results"
+    }
+  ],
+  "ciBaseline": {
+    "commit": "0a2bf8ed3776396d4b2855ebc51ebec5b4787d26",
+    "runs": [
+      45861370432,
+      45861377856
+    ],
+    "unitPassedPerRun": 593,
+    "browserPassedPerRun": 57,
+    "failures": 0
+  },
+  "clinicalValidation": "not_established",
+  "personalDataIncluded": false
+}

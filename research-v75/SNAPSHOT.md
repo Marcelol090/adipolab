@@ -1,0 +1,3 @@
+# Snapshot v144 / validação v145
+
+O manifesto fixa os identificadores de conteúdo e tamanhos de 11 arquivos JSON existentes no commit 0a2bf8ed3776396d4b2855ebc51ebec5b4787d26. Os testes verificam os bytes atuais contra esses identificadores. Um arquivo alterado intencionalmente exige revisão e atualização explícita do manifesto, preservando o histórico Git; não remover a verificação para obter CI verde. Git SHA-1 identifica blobs, não autentica autoria ou validade dos estudos. O registro de testes refere-se ao commit anterior. Nenhuma informação individual foi incorporada. O modelo de procedência W3C PROV inspira a organização, sem declaração de conformidade formal.
