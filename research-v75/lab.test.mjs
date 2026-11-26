@@ -1,0 +1,18 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {mean,variance,agreement,rng,coverage,confounding,run,checkRegistry} from "./lab.mjs";
+const read=n=>JSON.parse(readFileSync(new URL(n,import.meta.url),"utf8"));
+test("registry",()=>assert.ok(checkRegistry(read("./cycles.json"))));
+test("snapshot reproducible",()=>assert.deepEqual(run(),read("./synthetic-results.json")));
+test("identical instruments",()=>assert.equal(agreement([1,2],[1,2]).bias,0));
+test("fixed offset",()=>assert.deepEqual(agreement([1,2],[6,7]),{n:2,bias:5,sd:0,lower:5,upper:5}));
+test("variable error",()=>{const a=agreement([1,2,3,4],[0,3,2,5]);assert.equal(a.bias,0);assert.ok(a.lower<0&&a.upper>0)});
+for(const x of [[],[NaN],[Infinity],["1"],null])test("invalid sample "+String(x),()=>assert.throws(()=>mean(x)));
+test("invalid pairing",()=>assert.throws(()=>agreement([1,2],[1])));
+test("too few paired",()=>assert.throws(()=>agreement([1],[2])));
+test("variance n=1",()=>assert.throws(()=>variance([1])));
+for(const s of [-1,1.5,4294967296,NaN])test("invalid seed "+s,()=>assert.throws(()=>rng(s)));
+for(let s=0;s<16;s++)test("seed "+s,()=>{const a=rng(s),b=rng(s);assert.deepEqual(Array.from({length:100},()=>a()),Array.from({length:100},()=>b()))});
+for(const args of [[1,1,10],[1,129,10],[1,32,0],[1,32,10001]])test("bounds "+args.join(","),()=>assert.throws(()=>coverage(...args)));
+test("known sigma nominal coverage",()=>{const c=coverage(20261126);assert.ok(c.knownSigmaCoverage>.91&&c.knownSigmaCoverage<.98);assert.ok(c.underestimatedSigmaCoverage<c.knownSigmaCoverage)});
+test("confounding without causal effect",()=>{const c=confounding();assert.equal(c.trueCausalEffect,0);assert.ok(Math.abs(c.crude)>1);assert.ok(c.stratified.every(v=>Math.abs(v)<.2))});
+test("clinical gate cannot pass",()=>{const r=read("./cycles.json");r.clinicalVerdict="validated";assert.equal(checkRegistry(r),false)});
+test("no intervention in cycles",()=>{const r=read("./cycles.json");r.cycles[0].intervention=true;assert.equal(checkRegistry(r),false)});

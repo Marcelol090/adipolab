@@ -21,5 +21,7 @@ jobs:
         with:
           persist-credentials: false
       - run: node --version
-      - run: node --test research-v75/model.test.mjs
+      - run: node --test research-v75/*.test.mjs
       - run: node --check research-v75/model.mjs
+
+      - run: node --check research-v75/lab.mjs

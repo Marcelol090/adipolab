@@ -1,0 +1,143 @@
+{
+  "version": 100,
+  "scope": "observational_research",
+  "cycles": [
+    {
+      "id": 0,
+      "title": "Caracterização basal",
+      "criterion": "Procedência, instrumento e população documentados",
+      "gap": "Caracterização incompleta; dados pessoais não importados",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 1,
+      "title": "Contexto metabólico",
+      "criterion": "Desenho, desfecho e potenciais confundidores identificados",
+      "gap": "Sem estimativa causal individual",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 2,
+      "title": "Arquitetura subcutânea",
+      "criterion": "Região e profundidade anatômicas identificadas",
+      "gap": "Sem amostra individual",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 3,
+      "title": "Genômica e epigenômica",
+      "criterion": "Unidade biológica e origem da evidência identificadas",
+      "gap": "Sem genótipo ou expressão individual",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 4,
+      "title": "Fenotipagem regional",
+      "criterion": "Modalidade e definição anatômica declaradas",
+      "gap": "Sem calibração individual",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 5,
+      "title": "Contexto endócrino",
+      "criterion": "População, contexto fisiológico e limitações declarados",
+      "gap": "Sem efeito individual inferido",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 6,
+      "title": "Matriz extracelular",
+      "criterion": "Método histológico ou mecânico identificado",
+      "gap": "Sem medida tecidual individual",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 7,
+      "title": "Vascular e linfático",
+      "criterion": "Componente hídrico distinguido de adiposidade",
+      "gap": "Sem diagnóstico inferido",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 8,
+      "title": "Integração multiômica",
+      "criterion": "Doador e coorte compatíveis; pareamento demonstrado",
+      "gap": "Microdados não importados",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    },
+    {
+      "id": 9,
+      "title": "Validação longitudinal",
+      "criterion": "Coorte externa, desfecho e método independentes documentados",
+      "gap": "Validação clínica não realizada",
+      "status": "open",
+      "scope": "observational_research",
+      "intervention": false
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H01",
+      "question": "Uma correlação alta garante concordância?",
+      "design": "synthetic_paired_sensor",
+      "status": "refuted_in_synthetic_example",
+      "limitation": "Não estima erro clínico."
+    },
+    {
+      "id": "H02",
+      "question": "Subestimar a variância altera a cobertura?",
+      "design": "synthetic_monte_carlo_known_sigma",
+      "status": "supported_in_synthetic_example",
+      "limitation": "Normalidade e independência impostas; não representa dados clínicos."
+    },
+    {
+      "id": "H03",
+      "question": "Confundimento pode produzir associação sem efeito causal?",
+      "design": "synthetic_binary_common_cause",
+      "status": "supported_in_synthetic_example",
+      "limitation": "Estrutura causal conhecida por construção, não inferida em humanos."
+    },
+    {
+      "id": "H04",
+      "question": "Há validação independente do modelo fisiológico individual?",
+      "design": "external_human_validation",
+      "status": "not_evaluated",
+      "limitation": "Microdados e modelo calibrado ausentes."
+    }
+  ],
+  "publicData": [
+    {
+      "id": "E010",
+      "url": "https://doi.org/10.6069/sq0n-1x32",
+      "title": "Proteômica de tecidos pareados",
+      "access": "not_verified",
+      "rawImported": false
+    },
+    {
+      "id": "E044",
+      "url": "https://www.celltype.info/project/1089",
+      "title": "Atlas HATA",
+      "access": "not_verified",
+      "rawImported": false
+    }
+  ],
+  "clinicalVerdict": "not_established"
+}
