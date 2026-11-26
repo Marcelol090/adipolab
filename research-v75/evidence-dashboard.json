@@ -1,0 +1,118 @@
+{
+  "version": 161,
+  "checkedOn": "2026-11-26",
+  "scope": "source_audit_and_measurement_quality",
+  "records": [
+    {
+      "id": "B01",
+      "topic": "Transcriptômica",
+      "status": "partial",
+      "title": "A human adipose tissue cell-type transcriptome atlas",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/35830816/",
+      "note": "Resumo confirma 527 e 646 amostras. Número de pessoas independentes não estabelecido nesta revisão.",
+      "location": "Abstract",
+      "kind": "observational"
+    },
+    {
+      "id": "B02",
+      "topic": "Transcriptômica",
+      "status": "verified",
+      "title": "Human subcutaneous and visceral adipocyte atlases",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11821520/",
+      "note": "Resultados confirmam 15 amostras, cinco pares e 121610 núcleos após controle de qualidade. Não são 121610 pessoas.",
+      "location": "Results, Figure 1",
+      "kind": "observational"
+    },
+    {
+      "id": "v152",
+      "topic": "Proteômica",
+      "status": "corrected",
+      "title": "Multicenter Longitudinal Quality Assessment of MS-Based Proteomics in Plasma and Serum",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11894660/",
+      "note": "Oito laboratórios confirmados. Errata de 2025 acrescenta coautor omitido; não informa alteração nos resultados numéricos.",
+      "location": "Abstract; correction notice",
+      "kind": "measurement",
+      "correction": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12418485/"
+    },
+    {
+      "id": "v153",
+      "topic": "Metabolômica",
+      "status": "verified",
+      "title": "Inter-laboratory reproducibility of a targeted metabolomics platform",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6317696/",
+      "note": "Contagens, CV e exatidão reconferidos. Resultados restritos ao ensaio e aos materiais estudados.",
+      "location": "Abstract; Results; Table 1",
+      "kind": "measurement"
+    },
+    {
+      "id": "v154",
+      "topic": "Nutrição",
+      "status": "partial",
+      "title": "Overview of dietary assessment methods",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/33714006/",
+      "note": "Identidade e discussão metodológica confirmadas; efeitos dietéticos não extraídos.",
+      "location": "Abstract",
+      "kind": "methodology"
+    },
+    {
+      "id": "v156",
+      "topic": "Toxicologia",
+      "status": "partial",
+      "title": "Guidance Document on Good In Vitro Method Practices, Second Edition",
+      "source": "https://doi.org/10.1787/5ba6777b-en",
+      "note": "Identidade da diretriz OECD 2025 confirmada; sem extração de resultados de ensaios.",
+      "location": "Publisher metadata",
+      "kind": "methodology"
+    },
+    {
+      "id": "v159",
+      "topic": "Validade externa",
+      "status": "partial",
+      "title": "Evaluation of clinical prediction models (part 2)",
+      "source": "https://www.bmj.com/content/384/bmj-2023-074820",
+      "note": "Diretriz de avaliação externa; não demonstra validação do AdipoLab.",
+      "location": "Abstract and methodology excerpt",
+      "kind": "methodology"
+    }
+  ],
+  "benchmark": {
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6317696/",
+    "total": 189,
+    "below20": 160,
+    "above20": 24,
+    "unavailable": 5,
+    "medianCVNormalized": 7.6,
+    "medianCVUnnormalized": 18,
+    "referenceAccuracy": 107,
+    "referencePrecision": 6.7
+  },
+  "gaps": [
+    {
+      "id": "G01",
+      "title": "Microdados originais",
+      "status": "not_imported",
+      "detail": "Sem matriz de dados reanalisada."
+    },
+    {
+      "id": "G02",
+      "title": "Revisão integral",
+      "status": "incomplete",
+      "detail": "Parte das fontes foi consultada somente por resumo ou excerto."
+    },
+    {
+      "id": "G03",
+      "title": "Validação clínica externa",
+      "status": "not_established",
+      "detail": "Nenhuma validação individual executada."
+    },
+    {
+      "id": "G04",
+      "title": "Independência das coortes",
+      "status": "incomplete",
+      "detail": "Identificadores distintos não garantem participantes independentes."
+    }
+  ],
+  "personalDataIncluded": false,
+  "modelTrained": false,
+  "clinicalValidation": "not_established"
+}
