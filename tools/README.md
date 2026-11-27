@@ -21,3 +21,14 @@ Browser regression test (requires Playwright and a local Chromium or Chrome):
     python tools/test_evidence_browser.py
 
 Checks four viewport widths in light and dark mode, synthetic imports, rejection, reset, overflow, and absence of external requests or storage writes.
+
+
+Measurement-source metadata refresh (three fixed public studies; no personal information):
+
+    python tools/refresh_measurement_provenance.py PATH_TO_LOCAL_CACHE
+
+The output distinguishes complete, partial and failed retrievals. Raw responses are stored locally by SHA-256; latest_attempt.json records the newest attempt and last_complete.json preserves the most recent complete result. A missing editorial link in Crossref is not proof that a publication has no editorial warning. This module does not replace the full v190 retraction audit or establish clinical validation. Do not commit the cache.
+
+Regression tests:
+
+    python tools/test_measurement_provenance.py
