@@ -1,6 +1,6 @@
 # Evidence summary integration
 
-The evidence page defaults to historical v190 audit counts, explicitly labelled as not synchronized. To use the actual SQLite archive, run locally:
+The evidence page defaults to aggregate v190 counts verified from the recovered archive at publication, not automatically synchronized. To use the actual SQLite archive, run locally:
 
 ```powershell
 python tools/export_evidence_summary.py PATH_TO/evidence_v190.sqlite PATH_TO/v190_manifest.json evidence-summary.json
@@ -46,3 +46,9 @@ Regenerate the public source snapshot only after a successful refresh:
     python tools/publish_measurement_snapshot.py PATH_TO_LOCAL_CACHE evidence.html
 
 The publisher independently recomputes hashes, verifies identifiers and editorial fields from the raw blobs, refuses incomplete latest attempts, and displays review requirements when flags exist. It does not ship raw XML/JSON, the private database, keys or participant data. This is a limited bibliographic check, not a full retraction or clinical audit.
+
+Verified archive publication (local, read-only source files):
+
+    python tools/publish_verified_audit.py PATH_TO_V190 PATH_TO_V170 evidence.html
+
+This verifies all four v190 manifest hashes, the v170 registry CSV hash, unique registry edges and PMID coverage, the archived measurement and safety reports against SQLite, and the archive counts. It regenerates the public aggregate section and dashboard counts. No database, titles, individual data or raw research material are published. Rerun when a new verified snapshot is needed; there is no continuous server-side connection to the local database.
