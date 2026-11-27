@@ -1,0 +1,55 @@
+name: AdipoLab research quality
+on:
+  pull_request:
+    paths:
+      - 'research-v75/**'
+      - '.github/workflows/research-quality.yml'
+  push:
+    branches: [main, research-v75-observational]
+    paths:
+      - 'research-v75/**'
+      - '.github/workflows/research-quality.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: node --version
+      - run: node --experimental-test-coverage --test research-v75/*.test.mjs
+      - run: node --check research-v75/model.mjs
+
+      - run: node --check research-v75/lab.mjs
+
+      - run: node --check research-v75/quality.mjs
+
+      - run: node --check research-v75/review.mjs
+
+      - run: node --check research-v75/integrity.mjs
+      - run: node --check research-v75/provenance.mjs
+      - run: node --check research-v75/population-methods.mjs
+      - run: node --check research-v75/bibliographic-audit.mjs
+      - run: node --check research-v75/research-integrity.mjs
+      - run: node --check research-v75/snapshot.mjs
+      - run: node --check research-v75/integrated-audit.mjs
+      - run: node --check research-v75/published-evidence.mjs
+      - run: node --check research-v75/evidence-quality-v160.mjs
+      - run: node --check research-v75/evidence-dashboard.mjs
+      - run: node --check research-v75/evidence-dashboard-ui.mjs
+      - run: node --check research-v75/validation-suite-ui.mjs
+      - run: node research-v75/run-validation-suite.mjs
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.1
+      - run: npx --no-install playwright install --with-deps chromium
+      - run: node research-v75/browser-smoke.mjs

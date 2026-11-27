@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "units": "arbitrary sensor units",
+  "seed": 20261126,
+  "agreement": [
+    {
+      "name": "identical",
+      "n": 4,
+      "bias": 0,
+      "sd": 0,
+      "lower": 0,
+      "upper": 0
+    },
+    {
+      "name": "fixed offset",
+      "n": 4,
+      "bias": 5,
+      "sd": 0,
+      "lower": 5,
+      "upper": 5
+    },
+    {
+      "name": "variable error",
+      "n": 4,
+      "bias": 0,
+      "sd": 1.1547005383792515,
+      "lower": -2.263213055223333,
+      "upper": 2.263213055223333
+    }
+  ],
+  "coverage": {
+    "seed": 20261126,
+    "n": 32,
+    "reps": 2000,
+    "knownSigmaCoverage": 0.9545,
+    "underestimatedSigmaCoverage": 0.693
+  },
+  "confounding": {
+    "n": 10000,
+    "crude": 2.4375917766543496,
+    "stratified": [
+      0.010136682394076293,
+      0.052811860182235826
+    ],
+    "trueCausalEffect": 0
+  }
+}

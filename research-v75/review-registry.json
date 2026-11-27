@@ -1,0 +1,263 @@
+{
+  "version": 120,
+  "scope": "bibliographic mapping and research integrity",
+  "areas": [
+    {
+      "version": 111,
+      "title": "Biologia celular adiposa",
+      "refs": [
+        "E004",
+        "E005",
+        "E014",
+        "E024",
+        "E026",
+        "E035",
+        "E044"
+      ],
+      "gap": "Identidade celular e doador não equivalem a efeito clínico.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 112,
+      "title": "Metabolômica e proteômica",
+      "refs": [
+        "E010",
+        "E029",
+        "E037"
+      ],
+      "gap": "Fontes disponíveis são sobretudo proteômicas; metabolômica não caracterizada.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 113,
+      "title": "Nutrição e metabolismo",
+      "refs": [
+        "E007",
+        "E011",
+        "E016"
+      ],
+      "gap": "Nenhuma evidência nutrigenômica individual validada.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 114,
+      "title": "Farmacologia e toxicologia",
+      "refs": [
+        "E048",
+        "Q04",
+        "Q05"
+      ],
+      "gap": "Fontes de segurança, sem inferência de eficácia ou incidência.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 115,
+      "title": "Substâncias naturais — segurança",
+      "refs": [
+        "E048",
+        "E049",
+        "Q05"
+      ],
+      "gap": "Sem composição ou qualidade de lote verificada.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 116,
+      "title": "Substâncias sintéticas — segurança",
+      "refs": [
+        "Q04",
+        "E048"
+      ],
+      "gap": "Sem exposição individual ou farmacocinética verificada.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 117,
+      "title": "Epigenética",
+      "refs": [
+        "E027",
+        "E030",
+        "E047"
+      ],
+      "gap": "Sem dados individuais; associação não demonstra causalidade.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 118,
+      "title": "Resultados nulos e contraditórios",
+      "refs": [
+        "Q06",
+        "Q07",
+        "E012"
+      ],
+      "gap": "Texto integral e extração de estimativas ainda não realizados.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 119,
+      "title": "Fundamentação dos ciclos",
+      "refs": [
+        "E001",
+        "E005",
+        "E034",
+        "E050"
+      ],
+      "gap": "Critérios documentais não constituem validação clínica.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    },
+    {
+      "version": 120,
+      "title": "Auditoria integrada",
+      "refs": [
+        "E009",
+        "E034",
+        "Q01",
+        "Q06",
+        "Q07"
+      ],
+      "gap": "Sem microdados humanos ou validação externa.",
+      "status": "metadata_only",
+      "clinicalValidation": false
+    }
+  ],
+  "cycles": [
+    {
+      "cycle": 0,
+      "title": "Caracterização basal",
+      "refs": [
+        "E001",
+        "Q01"
+      ],
+      "criterion": "Procedência, instrumento e população documentados",
+      "gap": "Caracterização incompleta; dados pessoais não importados",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 1,
+      "title": "Contexto metabólico",
+      "refs": [
+        "E007",
+        "E011",
+        "E016"
+      ],
+      "criterion": "Desenho, desfecho e potenciais confundidores identificados",
+      "gap": "Sem estimativa causal individual",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 2,
+      "title": "Arquitetura subcutânea",
+      "refs": [
+        "E005",
+        "E024"
+      ],
+      "criterion": "Região e profundidade anatômicas identificadas",
+      "gap": "Sem amostra individual",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 3,
+      "title": "Genômica e epigenômica",
+      "refs": [
+        "E027",
+        "E030",
+        "E047"
+      ],
+      "criterion": "Unidade biológica e origem da evidência identificadas",
+      "gap": "Sem genótipo ou expressão individual",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 4,
+      "title": "Fenotipagem regional",
+      "refs": [
+        "E006",
+        "E033"
+      ],
+      "criterion": "Modalidade e definição anatômica declaradas",
+      "gap": "Sem calibração individual",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 5,
+      "title": "Contexto endócrino",
+      "refs": [
+        "E043"
+      ],
+      "criterion": "População, contexto fisiológico e limitações declarados",
+      "gap": "Sem efeito individual inferido",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 6,
+      "title": "Matriz extracelular",
+      "refs": [
+        "E019",
+        "E023"
+      ],
+      "criterion": "Método histológico ou mecânico identificado",
+      "gap": "Sem medida tecidual individual",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 7,
+      "title": "Vascular e linfático",
+      "refs": [
+        "E028",
+        "E031",
+        "E038"
+      ],
+      "criterion": "Componente hídrico distinguido de adiposidade",
+      "gap": "Sem diagnóstico inferido",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 8,
+      "title": "Integração multiômica",
+      "refs": [
+        "E009",
+        "E018"
+      ],
+      "criterion": "Doador e coorte compatíveis; pareamento demonstrado",
+      "gap": "Microdados não importados",
+      "status": "open",
+      "clinicalValidation": false
+    },
+    {
+      "cycle": 9,
+      "title": "Validação longitudinal",
+      "refs": [
+        "E032",
+        "E034",
+        "E050"
+      ],
+      "criterion": "Coorte externa, desfecho e método independentes documentados",
+      "gap": "Validação clínica não realizada",
+      "status": "open",
+      "clinicalValidation": false
+    }
+  ],
+  "verdict": "not_established",
+  "microdataImported": false,
+  "notes": [
+    "References inherited from v90/v110; mapping is thematic, not extraction of treatment effects.",
+    "No clinical protocol, exposure recommendations, dose, combinations, rankings or biological response predictions."
+  ]
+}

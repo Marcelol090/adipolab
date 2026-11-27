@@ -1,0 +1,1026 @@
+{
+  "version": 90,
+  "source": "Catálogos anteriores; metadados não revalidados",
+  "records": [
+    {
+      "id": "E001",
+      "url": "https://ajcn.nutrition.org/article/S0002-9165%2826%2900092-4/fulltext",
+      "aliases": [],
+      "title": "Padrões de composição corporal",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "Guia",
+      "limitations": [
+        "Limitações dependentes do instrumento.",
+        "Limitações dependem do instrumento e do fabricante"
+      ],
+      "provenance": [
+        "v83:R01",
+        "v51.csv:E09"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E002",
+      "url": "https://bdtd.ibict.br/vufind/Record/UFPE_2cbcfd02451a5dbf774f062ce1d34691",
+      "aliases": [],
+      "title": "Comparação de técnicas — UFPE",
+      "topic": "Métodos",
+      "lang": "pt",
+      "type": "Dissertação",
+      "limitations": [
+        "Registro institucional; texto integral não auditado.",
+        "Registro institucional; texto integral não auditado"
+      ],
+      "provenance": [
+        "v83:R02",
+        "v51.csv:E13"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E003",
+      "url": "https://doi.org/10.1038/s41467-026-75426-6",
+      "aliases": [],
+      "title": "SAT abdominal e IAT",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "artigo",
+      "limitations": [
+        "Não equivale a número de indivíduos"
+      ],
+      "provenance": [
+        "v51.csv:E03"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E004",
+      "url": "https://doi.org/10.1038/s41467-026-76065-7",
+      "aliases": [],
+      "title": "Transcriptômica de depósitos humanos",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "artigo",
+      "limitations": [
+        "Variância por doador não equivale a hereditariedade"
+      ],
+      "provenance": [
+        "v51.csv:E01"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E005",
+      "url": "https://doi.org/10.1038/s42255-025-01296-9",
+      "aliases": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12707904"
+      ],
+      "title": "Atlas celular — consenso",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "Consenso",
+      "limitations": [
+        "Nomenclatura não valida intervenções.",
+        "Guia metodológico; não valida uma intervenção",
+        "Nomenclatura não demonstra intervenção clínica.",
+        "não constitui ensaio clínico"
+      ],
+      "provenance": [
+        "v83:R04",
+        "v51.csv:E15",
+        "v53_v58.csv:E001",
+        "v59_v65.csv:E04"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E006",
+      "url": "https://doi.org/10.1038/s43856-026-01440-w",
+      "aliases": [
+        "https://www.nature.com/articles/s43856-026-01440-w"
+      ],
+      "title": "Comparação DXA e RM",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "Artigo",
+      "limitations": [
+        "Concordância transversal não garante precisão longitudinal.",
+        "Concordância transversal não garante precisão longitudinal"
+      ],
+      "provenance": [
+        "v83:R05",
+        "v51.csv:E10"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E007",
+      "url": "https://doi.org/10.1146/annurev-nutr-061824-053907",
+      "aliases": [],
+      "title": "Biologia regional e metabolismo",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "revisão",
+      "limitations": [
+        "Revisão não constitui nova amostra independente."
+      ],
+      "provenance": [
+        "v53_v58.csv:E011"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E008",
+      "url": "https://doi.org/10.1152/ajpcell.00463.2025",
+      "aliases": [],
+      "title": "Human deep subcutaneous adipose tissue is enriched for inflammatory and tissue remodeling pathways",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "artigo humano",
+      "limitations": [
+        "n biológico igual a 1"
+      ],
+      "provenance": [
+        "v59_v65.csv:E03"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E009",
+      "url": "https://doi.org/10.1186/s13059-020-02015-1",
+      "aliases": [],
+      "title": "MOFA+",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "Método",
+      "limitations": [
+        "Integração multimodal; nenhum modelo treinado aqui.",
+        "nenhum modelo MOFA treinado nesta versão"
+      ],
+      "provenance": [
+        "v83:R03",
+        "v59_v65.csv:E18"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E010",
+      "url": "https://doi.org/10.6069/sq0n-1x32",
+      "aliases": [],
+      "title": "Proteômica de tecidos pareados",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "Dataset",
+      "limitations": [
+        "Microdados não importados; nenhuma inferência individual."
+      ],
+      "provenance": [
+        "v83:R26"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E011",
+      "url": "https://ediss.sub.uni-hamburg.de/handle/ediss/5777",
+      "aliases": [],
+      "title": "Ácidos graxos — Hamburgo",
+      "topic": "Nutrição",
+      "lang": "de",
+      "type": "Tese",
+      "limitations": [
+        "Registro institucional; texto integral não auditado.",
+        "Registro institucional; ano não reconfirmado no texto integral",
+        "Metadados de tese; não demonstra efeito nutricional causal."
+      ],
+      "provenance": [
+        "v83:R19",
+        "v51.csv:E11",
+        "v53_v58.csv:E012"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E012",
+      "url": "https://etheses.bham.ac.uk/id/eprint/14435",
+      "aliases": [],
+      "title": "Body fat distribution and obesity: a comparison of upper and lower body adipose tissue biology in humans",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "doutorado",
+      "limitations": [
+        "estudos em mulheres pós-menopausa; validade externa limitada"
+      ],
+      "provenance": [
+        "v59_v65.csv:E10"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E013",
+      "url": "https://libraetd.lib.virginia.edu/public_view/4b29b666b",
+      "aliases": [],
+      "title": "Caracterização mecânica — Virgínia",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "Tese",
+      "limitations": [
+        "Resumo institucional; não representa biomecânica individual.",
+        "não aplicável diretamente a deformação crônica"
+      ],
+      "provenance": [
+        "v83:R09",
+        "v59_v65.csv:E07"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11437900",
+      "aliases": [],
+      "title": "Heterogeneidade celular",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "revisão",
+      "limitations": [
+        "Síntese de estudos heterogêneos; não é uma coorte."
+      ],
+      "provenance": [
+        "v53_v58.csv:E002"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E015",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13013200",
+      "aliases": [],
+      "title": "RM repetida",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "Artigo",
+      "limitations": [
+        "Coorte UK Biobank; possível sobreposição.",
+        "Coorte UKB; precisão técnica não é validade clínica"
+      ],
+      "provenance": [
+        "v83:R06",
+        "v51.csv:E06"
+      ],
+      "cohorts": [
+        "UK Biobank"
+      ],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13341497",
+      "aliases": [],
+      "title": "Contexto nutricional e distribuição",
+      "topic": "Nutrição",
+      "lang": "en",
+      "type": "Revisão",
+      "limitations": [
+        "Não demonstra redistribuição seletiva duradoura.",
+        "Não demonstra redistribuição seletiva duradoura pela dieta."
+      ],
+      "provenance": [
+        "v83:R23",
+        "v53_v58.csv:E010"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13526011",
+      "aliases": [],
+      "title": "Segmentação NAKO e UK Biobank",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "Artigo",
+      "limitations": [
+        "Coortes potencialmente compartilhadas com outros estudos.",
+        "26877 NAKO e 18974 UKB; amostras potencialmente sobrepostas"
+      ],
+      "provenance": [
+        "v83:R07",
+        "v51.csv:E08"
+      ],
+      "cohorts": [
+        "UK Biobank",
+        "NAKO"
+      ],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7701361",
+      "aliases": [],
+      "title": "Integração multiômica em pesquisa biomédica",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "Revisão",
+      "limitations": [
+        "Distinguir dados pareados e não pareados.",
+        "sem validação de modelo adiposo"
+      ],
+      "provenance": [
+        "v83:R08",
+        "v59_v65.csv:E17"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7876417",
+      "aliases": [],
+      "title": "Viscoelasticidade tecidual",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "Artigo",
+      "limitations": [
+        "Rigidez e fibrose não são equivalentes.",
+        "acesso integral bloqueado por CAPTCHA"
+      ],
+      "provenance": [
+        "v83:R10",
+        "v59_v65.csv:E06"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9761573",
+      "aliases": [],
+      "title": "Exploring Visceral and Subcutaneous Adipose Tissue Secretomes in Human Obesity",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "artigo humano ex vivo",
+      "limitations": [
+        "ex vivo não equivale a resposta sistêmica"
+      ],
+      "provenance": [
+        "v59_v65.csv:E11"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9957663",
+      "aliases": [],
+      "title": "Matriz extracelular e fibrose",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "revisão",
+      "limitations": [
+        "Mistura evidência animal e humana."
+      ],
+      "provenance": [
+        "v53_v58.csv:E007"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E022",
+      "url": "https://produccioncientifica.ucm.es/documentos/63bc334b3035a915c707ca2b",
+      "aliases": [],
+      "title": "Vesículas extracelulares — Madrid",
+      "topic": "Tecido",
+      "lang": "es",
+      "type": "Tese",
+      "limitations": [
+        "Resumo institucional; sem inferência individual.",
+        "sem demonstração de redistribuição corporal"
+      ],
+      "provenance": [
+        "v83:R21",
+        "v59_v65.csv:E12"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20713683",
+      "aliases": [],
+      "title": "Fibrose em tecido adiposo humano",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "estudo humano",
+      "limitations": [
+        "Comparação subcutânea e omental; não mede conversão de forma."
+      ],
+      "provenance": [
+        "v53_v58.csv:E008"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23512827",
+      "aliases": [],
+      "title": "Subcutâneo superficial e profundo",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "Artigo",
+      "limitations": [
+        "Amostras pequenas; sem desfecho longitudinal.",
+        "amostra pequena; sem desfecho longitudinal"
+      ],
+      "provenance": [
+        "v83:R25",
+        "v59_v65.csv:E01"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24105412",
+      "aliases": [],
+      "title": "Mechanical properties of human adipose tissues and ECM",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "artigo humano",
+      "limitations": [
+        "sem extrapolação para medidas individuais"
+      ],
+      "provenance": [
+        "v59_v65.csv:E05"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29738484",
+      "aliases": [],
+      "title": "Human Macrophages Preferentially Infiltrate the Superficial Adipose Tissue",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "artigo humano",
+      "limitations": [
+        "sem inferência de intervenção"
+      ],
+      "provenance": [
+        "v59_v65.csv:E02"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30477572",
+      "aliases": [],
+      "title": "Assinaturas de cromatina e transcriptoma regional",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "estudo humano",
+      "limitations": [
+        "Células cultivadas; não demonstra transformação corporal."
+      ],
+      "provenance": [
+        "v53_v58.csv:E004"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E028",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31776824",
+      "aliases": [],
+      "title": "Sistema linfático humano",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "Artigo",
+      "limitations": [
+        "Sem quantificação funcional individual.",
+        "sem quantificação funcional individual"
+      ],
+      "provenance": [
+        "v83:R13",
+        "v59_v65.csv:E14"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E029",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33843278",
+      "aliases": [],
+      "title": "Proteome analysis of human adipocytes identifies depot-specific heterogeneity at metabolic control points",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "artigo humano",
+      "limitations": [
+        "proteínas não são participantes; sem desfecho longitudinal"
+      ],
+      "provenance": [
+        "v59_v65.csv:E09"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E030",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34394195",
+      "aliases": [],
+      "title": "Metilação e forma corporal",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "estudo humano",
+      "limitations": [
+        "Associação não estabelece causa ou predição individual."
+      ],
+      "provenance": [
+        "v53_v58.csv:E005"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E031",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35074795",
+      "aliases": [],
+      "title": "Linfedema e obesidade",
+      "topic": "Segurança",
+      "lang": "en",
+      "type": "Revisão",
+      "limitations": [
+        "Não permite inferir diagnóstico individual.",
+        "não inferir diagnóstico individual"
+      ],
+      "provenance": [
+        "v83:R14",
+        "v59_v65.csv:E20"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E032",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35260612",
+      "aliases": [],
+      "title": "RM longitudinal aproximadamente dois anos",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "artigo",
+      "limitations": [
+        "Coorte UKB; não é intervenção"
+      ],
+      "provenance": [
+        "v51.csv:E05"
+      ],
+      "cohorts": [
+        "UK Biobank"
+      ],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E033",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35773277",
+      "aliases": [],
+      "title": "Composição regional por RM",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "Artigo",
+      "limitations": [
+        "Associação populacional, sem previsão individual."
+      ],
+      "provenance": [
+        "v83:R24",
+        "v143:PubMed PMID 35773277"
+      ],
+      "cohorts": [
+        "UK Biobank"
+      ],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38729274",
+      "aliases": [],
+      "title": "Validação externa de modelos",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "Método",
+      "limitations": [
+        "Não valida modelos do AdipoLab.",
+        "Não valida nenhum modelo do AdipoLab."
+      ],
+      "provenance": [
+        "v83:R17",
+        "v53_v58.csv:E015"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E035",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39141531",
+      "aliases": [],
+      "title": "Envelhecimento do tecido subcutâneo abdominal",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "estudo humano",
+      "limitations": [
+        "Amostras abdominais, não gluteofemorais."
+      ],
+      "provenance": [
+        "v53_v58.csv:E003"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E036",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40675230",
+      "aliases": [],
+      "title": "Avaliação prospectiva da validação e utilização de modelos",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "estudo humano",
+      "limitations": [
+        "Pesquisa metodológica; não é coorte adiposa."
+      ],
+      "provenance": [
+        "v53_v58.csv:E016"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E037",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41786761",
+      "aliases": [],
+      "title": "Proteômica subcutânea e omental",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "artigo",
+      "limitations": [
+        "Não compara diretamente GFAT e ASAT"
+      ],
+      "provenance": [
+        "v51.csv:E04"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E038",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41840147",
+      "aliases": [],
+      "title": "Dysfunctional adipose tissue lymphatic crosstalk in obesity",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "revisão",
+      "limitations": [
+        "declaração de interesses comerciais; revisão não ensaio"
+      ],
+      "provenance": [
+        "v59_v65.csv:E15"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E039",
+      "url": "https://repositorio.bc.ufg.br/tede/handle/tede/16020",
+      "aliases": [],
+      "title": "Fibrose e marcadores — UFG",
+      "topic": "Tecido",
+      "lang": "pt",
+      "type": "Dissertação",
+      "limitations": [
+        "Embargo informado na auditoria anterior; sem extração de resultados.",
+        "sem extração de resultados"
+      ],
+      "provenance": [
+        "v83:R11",
+        "v59_v65.csv:E08"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E040",
+      "url": "https://repositorio.ufes.br/handle/10/5744",
+      "aliases": [],
+      "title": "Vascularização — UFES",
+      "topic": "Tecido",
+      "lang": "pt",
+      "type": "Dissertação",
+      "limitations": [
+        "Registro institucional; revisão integral pendente.",
+        "Trabalho acadêmico; sem revisão integral nesta rodada."
+      ],
+      "provenance": [
+        "v83:R12",
+        "v53_v58.csv:E009"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E041",
+      "url": "https://repositorio.ufjf.br/jspui/handle/ufjf/18536",
+      "aliases": [],
+      "title": "Avaliação do perfil de macrófagos tratados com pequenas vesículas extracelulares de tecido adiposo humano",
+      "topic": "Tecido",
+      "lang": "pt",
+      "type": "mestrado",
+      "limitations": [
+        "modelo experimental não equivale a efeito clínico"
+      ],
+      "provenance": [
+        "v59_v65.csv:E13"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E042",
+      "url": "https://repositorio.ulisboa.pt/entities/publication/c34070b4-886a-479f-9308-57b76edb6fee",
+      "aliases": [],
+      "title": "Tecido adiposo perivascular na fisiologia e patologia cardiovascular",
+      "topic": "Tecido",
+      "lang": "pt",
+      "type": "mestrado",
+      "limitations": [
+        "depósito distinto do gluteofemoral"
+      ],
+      "provenance": [
+        "v59_v65.csv:E16"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E043",
+      "url": "https://www.bdtd.ibict.br/vufind/Record/UFRN_ad00cf22eb8a5e4217d007474e9e87af",
+      "aliases": [],
+      "title": "Estágio menopausal e composição corporal",
+      "topic": "Métodos",
+      "lang": "pt",
+      "type": "dissertação",
+      "limitations": [
+        "Transversal; não demonstra causalidade"
+      ],
+      "provenance": [
+        "v51.csv:E12"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E044",
+      "url": "https://www.celltype.info/project/1089",
+      "aliases": [],
+      "title": "Atlas HATA",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "Atlas",
+      "limitations": [
+        "Microdados não importados; estudos parcialmente inéditos.",
+        "184 doadores; sete estudos inéditos; sem GFAT declarado"
+      ],
+      "provenance": [
+        "v83:R22",
+        "v51.csv:E02"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E045",
+      "url": "https://www.jstage.jst.go.jp/article/sccj1979/38/2/38_2_125/_article/-char/ja",
+      "aliases": [],
+      "title": "Distribuição facial por RM",
+      "topic": "Métodos",
+      "lang": "ja",
+      "type": "Artigo",
+      "limitations": [
+        "Região facial; não extrapolável a outras regiões.",
+        "Região facial; sem extrapolação gluteofemoral"
+      ],
+      "provenance": [
+        "v83:R20",
+        "v51.csv:E14"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E046",
+      "url": "https://www.nature.com/articles/s41366-026-02168-2",
+      "aliases": [],
+      "title": "Adiposidade e idade",
+      "topic": "Tecido",
+      "lang": "en",
+      "type": "artigo",
+      "limitations": [
+        "Coorte UKB; associação observacional"
+      ],
+      "provenance": [
+        "v51.csv:E07"
+      ],
+      "cohorts": [
+        "UK Biobank"
+      ],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E047",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47512",
+      "aliases": [],
+      "title": "Metadados de metilação regional",
+      "topic": "Multiômica",
+      "lang": "en",
+      "type": "registro de dados",
+      "limitations": [
+        "Registro filho; não contar como estudo independente."
+      ],
+      "provenance": [
+        "v53_v58.csv:E006"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E048",
+      "url": "https://www.nccih.nih.gov/health/providers/digest/herb-drug-interactions",
+      "aliases": [],
+      "title": "Interações entre suplementos e medicamentos",
+      "topic": "Segurança",
+      "lang": "en",
+      "type": "Institucional",
+      "limitations": [
+        "Não comprova segurança de combinações.",
+        "Evidência de interação pode ser indireta ou inconclusiva."
+      ],
+      "provenance": [
+        "v83:R15",
+        "v53_v58.csv:E013"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E049",
+      "url": "https://www.nccih.nih.gov/health/safety",
+      "aliases": [],
+      "title": "Segurança de práticas complementares",
+      "topic": "Segurança",
+      "lang": "en",
+      "type": "Institucional",
+      "limitations": [
+        "Segurança depende do produto e da pessoa.",
+        "Segurança específica depende do produto e da pessoa."
+      ],
+      "provenance": [
+        "v83:R16",
+        "v53_v58.csv:E014"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    },
+    {
+      "id": "E050",
+      "url": "https://www.strobe-statement.org",
+      "aliases": [],
+      "title": "STROBE",
+      "topic": "Métodos",
+      "lang": "en",
+      "type": "Diretriz",
+      "limitations": [
+        "Relato observacional; não certifica causalidade.",
+        "não certifica causalidade nem eficácia"
+      ],
+      "provenance": [
+        "v83:R18",
+        "v59_v65.csv:E19"
+      ],
+      "cohorts": [],
+      "access": "metadados herdados",
+      "microdata": "not_imported",
+      "clinicalValidation": "not_established"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {mean,variance,agreement,rng,coverage,confounding,run,checkRegistry} from "./lab.mjs";
+const read=n=>JSON.parse(readFileSync(new URL(n,import.meta.url),"utf8"));
+test("registry",()=>assert.ok(checkRegistry(read("./cycles.json"))));
+function compareSnapshot(a,b,key="root"){if(typeof b==="number"){assert.equal(typeof a,"number",key);if(Number.isInteger(b))assert.equal(a,b,key);else assert.ok(Number.isFinite(a)&&Math.abs(a-b)<=1e-12*Math.max(1,Math.abs(b)),key);return}if(b===null||typeof b!=="object"){assert.equal(a,b,key);return}assert.ok(a!==null&&typeof a==="object",key);assert.equal(Array.isArray(a),Array.isArray(b),key);assert.deepEqual(Object.keys(a).sort(),Object.keys(b).sort(),key);for(const k of Object.keys(b))compareSnapshot(a[k],b[k],key+"."+k)}
+test("snapshot reproducible across JS engines",()=>compareSnapshot(run(),read("./synthetic-results.json")));
+test("snapshot tolerance detects meaningful drift",()=>assert.throws(()=>compareSnapshot({value:0.0101},{value:0.0102})));
+test("snapshot counts exact",()=>assert.throws(()=>compareSnapshot({count:2001},{count:2000})));
+test("snapshot rejects missing field",()=>assert.throws(()=>compareSnapshot({},{count:2000})));
+test("snapshot rejects NaN",()=>assert.throws(()=>compareSnapshot({value:NaN},{value:0.0101})));
+test("identical instruments",()=>assert.equal(agreement([1,2],[1,2]).bias,0));
+test("fixed offset",()=>assert.deepEqual(agreement([1,2],[6,7]),{n:2,bias:5,sd:0,lower:5,upper:5}));
+test("variable error",()=>{const a=agreement([1,2,3,4],[0,3,2,5]);assert.equal(a.bias,0);assert.ok(a.lower<0&&a.upper>0)});
+for(const x of [[],[NaN],[Infinity],["1"],null])test("invalid sample "+String(x),()=>assert.throws(()=>mean(x)));
+test("invalid pairing",()=>assert.throws(()=>agreement([1,2],[1])));
+test("too few paired",()=>assert.throws(()=>agreement([1],[2])));
+test("variance n=1",()=>assert.throws(()=>variance([1])));
+for(const s of [-1,1.5,4294967296,NaN])test("invalid seed "+s,()=>assert.throws(()=>rng(s)));
+for(let s=0;s<16;s++)test("seed "+s,()=>{const a=rng(s),b=rng(s);assert.deepEqual(Array.from({length:100},()=>a()),Array.from({length:100},()=>b()))});
+for(const args of [[1,1,10],[1,129,10],[1,32,0],[1,32,10001]])test("bounds "+args.join(","),()=>assert.throws(()=>coverage(...args)));
+test("known sigma nominal coverage",()=>{const c=coverage(20261126);assert.ok(c.knownSigmaCoverage>.91&&c.knownSigmaCoverage<.98);assert.ok(c.underestimatedSigmaCoverage<c.knownSigmaCoverage)});
+test("confounding without causal effect",()=>{const c=confounding();assert.equal(c.trueCausalEffect,0);assert.ok(Math.abs(c.crude)>1);assert.ok(c.stratified.every(v=>Math.abs(v)<.2))});
+test("clinical gate cannot pass",()=>{const r=read("./cycles.json");r.clinicalVerdict="validated";assert.equal(checkRegistry(r),false)});
+test("no intervention in cycles",()=>{const r=read("./cycles.json");r.cycles[0].intervention=true;assert.equal(checkRegistry(r),false)});

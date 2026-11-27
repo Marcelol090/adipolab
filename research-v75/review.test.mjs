@@ -1,0 +1,12 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {assessFinding,compareFindings,validateRegistry} from "./review.mjs";
+const read=f=>JSON.parse(readFileSync(new URL(f,import.meta.url),"utf8")),reg=read("./review-registry.json"),known=new Set([...read("./catalog.json").records,...read("./quality-sources.json").sources].map(x=>x.id));
+test("registry integrity",()=>assert.equal(validateRegistry(reg,known),true));
+const fs=["positive","negative","null","inconclusive","missing"],mk=(finding,context="sensor-A")=>({finding,context,origin:"synthetic"});
+const expected=(x,y)=>x==="missing"||y==="missing"?"insufficient_metadata":x==="inconclusive"||y==="inconclusive"?"inconclusive":x===y?x==="null"?"both_null_not_proof_of_equivalence":"same_reported_direction":x==="null"||y==="null"?"mixed_null_and_direction":"opposite_reported_directions";
+for(const x of fs)for(const y of fs){test("same context "+x+" "+y,()=>assert.equal(compareFindings(mk(x),mk(y)),expected(x,y)));test("different context "+x+" "+y,()=>assert.equal(compareFindings(mk(x),mk(y,"sensor-B")),x==="missing"||y==="missing"?"insufficient_metadata":"not_comparable"))}
+for(const [i,v] of [null,{}, {finding:"positive",context:"sensor-A",origin:"human"}, {finding:"positive",context:"",origin:"synthetic"}].entries())test("invalid finding "+i,()=>assert.equal(assessFinding(v),"unknown"));
+for(let i=0;i<10;i++){test("cycle validation rejected "+i,()=>{const r=structuredClone(reg);r.cycles[i].clinicalValidation=true;assert.equal(validateRegistry(r,known),false)});test("unknown reference rejected "+i,()=>{const r=structuredClone(reg);r.areas[i].refs=["NONEXISTENT"];assert.equal(validateRegistry(r,known),false)})}
+test("duplicates rejected",()=>{const r=structuredClone(reg);r.areas[0].refs.push(r.areas[0].refs[0]);assert.equal(validateRegistry(r,known),false)});
+test("closed cycle rejected",()=>{const r=structuredClone(reg);r.cycles[1].status="closed";assert.equal(validateRegistry(r,known),false)});
+test("clinical verdict rejected",()=>{const r=structuredClone(reg);r.verdict="established";assert.equal(validateRegistry(r,known),false)});
+test("page matches ten areas",()=>{const h=readFileSync(new URL("./lab.html",import.meta.url),"utf8");assert.equal((h.match(/data-review-version="\d+"/g)||[]).length,10);assert.equal((h.match(/data-cycle-review="\d+"/g)||[]).length,10)});

@@ -1,0 +1,10 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFileSync} from "node:fs";import {gitBlobSha1,validateManifest,verifyRecord} from "./snapshot.mjs";
+const m=JSON.parse(readFileSync(new URL("./snapshot-v144.json",import.meta.url),"utf8"));
+test("manifest schema and exact registered set",()=>assert.equal(validateManifest(m),true));
+test("Git empty blob reference",()=>assert.equal(gitBlobSha1(Buffer.alloc(0)),"e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"));
+for(const r of m.records)test("snapshot "+r.file,()=>assert.equal(verifyRecord(r,readFileSync(new URL("./"+r.file,import.meta.url))),true));
+test("same size tamper detected",()=>{const r=m.records[0],b=readFileSync(new URL("./"+r.file,import.meta.url));b[0]^=1;assert.equal(verifyRecord(r,b),false)});
+test("synthetic cannot be relabeled",()=>{const x=structuredClone(m);x.records.find(r=>r.file==="synthetic-results.json").role="clinical_results";assert.equal(validateManifest(x),false)});
+test("path traversal rejected",()=>{const x=structuredClone(m);x.records[0].file="../index.html";assert.equal(validateManifest(x),false)});
+test("duplicate rejected",()=>{const x=structuredClone(m);x.records[1]=x.records[0];assert.equal(validateManifest(x),false)});
+test("missing record rejected",()=>{const x=structuredClone(m);x.records.pop();assert.equal(validateManifest(x),false)});

@@ -1,0 +1,1 @@
+import {readFileSync} from "node:fs";import {audit} from "./validation-suite.mjs";const r=JSON.parse(readFileSync(new URL("./validation-suite.json",import.meta.url),"utf8"));const result=audit(r);console.log(JSON.stringify(result,null,2));if(result.passed!==result.total)process.exitCode=1;

@@ -1,0 +1,85 @@
+{
+  "version": 151,
+  "scope": "published_observational_measurements_only",
+  "records": [
+    {
+      "id": "B01",
+      "title": "A human adipose tissue cell-type transcriptome atlas",
+      "year": 2022,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35830816/",
+      "access": "indexed_abstract_and_publisher_excerpt",
+      "population": "human",
+      "design": "secondary_observational_analysis",
+      "measurement": "bulk RNA sequencing",
+      "counts": [
+        {
+          "name": "visceral tissue",
+          "unit": "tissue_samples",
+          "value": 527
+        },
+        {
+          "name": "subcutaneous tissue",
+          "unit": "tissue_samples",
+          "value": 646
+        }
+      ],
+      "location": "Abstract; data and code availability",
+      "finding": "Published data describe tissue cellular transcriptomes; sample count is not a count of independent donors.",
+      "limitation": "Independent donor count and overlap not established in this extraction. Expression estimates do not establish protein activity or individual physiological response.",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "id": "B02",
+      "title": "Human subcutaneous and visceral adipocyte atlases uncover classical and nonclassical adipocytes and depot-specific patterns",
+      "year": 2025,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11821520/",
+      "access": "full_text_sections_inspected",
+      "population": "human",
+      "design": "observational_tissue_atlas",
+      "measurement": "single-nucleus RNA sequencing",
+      "counts": [
+        {
+          "name": "subcutaneous tissue",
+          "unit": "tissue_samples",
+          "value": 5
+        },
+        {
+          "name": "visceral tissue",
+          "unit": "tissue_samples",
+          "value": 10
+        },
+        {
+          "name": "paired tissue donors",
+          "unit": "paired_donors",
+          "value": 5
+        },
+        {
+          "name": "subcutaneous tissue",
+          "unit": "nuclei_passing_qc",
+          "value": 37879
+        },
+        {
+          "name": "visceral tissue",
+          "unit": "nuclei_passing_qc",
+          "value": 83731
+        }
+      ],
+      "location": "Results, Human fat depot-specific adipocyte atlases; Figure 1; Methods, Collection of human samples",
+      "finding": "Human tissue samples show cellular heterogeneity. Multiple nuclei from each sample do not constitute independent human participants.",
+      "limitation": "Selected surgical cohort and sampled abdominal tissue; not a validated model of individual anatomy or longitudinal physiology.",
+      "rawImported": false,
+      "individualValidation": false
+    }
+  ],
+  "rawDataImported": false,
+  "modelTrained": false,
+  "personalDataIncluded": false,
+  "clinicalValidation": "not_established",
+  "accessDate": "2026-11-26",
+  "notes": [
+    "Counts transcribed from specified publication sections; not reanalysis.",
+    "Do not pool nuclei, samples or donors, or combine studies as independent cohorts.",
+    "No inferred genotype or intervention effects."
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "version": 160,
+  "scope": "measurement_quality_and_safety",
+  "records": [
+    {
+      "version": 152,
+      "area": "Proteômica",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.jproteome.4c00644",
+      "title": "Multicenter Longitudinal Quality Assessment of MS-Based Proteomics in Plasma and Serum",
+      "access": "publisher_excerpt_direct_403",
+      "role": "analytical_measurement",
+      "measurements": [
+        {
+          "name": "laboratórios",
+          "value": 8,
+          "unit": "laboratories",
+          "location": "Publisher excerpt"
+        }
+      ],
+      "limitation": "Estudo interlaboratorial de plasma e soro; diferenças entre plataformas. Acesso direto bloqueado por HTTP 403.",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "version": 153,
+      "area": "Metabolômica",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6317696/",
+      "title": "Inter-laboratory reproducibility of a targeted metabolomics platform for analysis of human serum and plasma",
+      "access": "full_text_sections_inspected",
+      "role": "analytical_measurement",
+      "measurements": [
+        {
+          "name": "laboratórios",
+          "value": 6,
+          "unit": "laboratories",
+          "location": "Abstract"
+        },
+        {
+          "name": "metabólitos no painel",
+          "value": 189,
+          "unit": "analytes",
+          "location": "Abstract"
+        },
+        {
+          "name": "CV mediano interlaboratorial em amostras biológicas típicas",
+          "value": 7.6,
+          "unit": "percent_cv",
+          "location": "Results; Table 1"
+        },
+        {
+          "name": "metabólitos com CV mediano inferior a 20%",
+          "value": 160,
+          "unit": "analytes",
+          "location": "Results"
+        },
+        {
+          "name": "metabólitos com CV mediano superior a 20%",
+          "value": 24,
+          "unit": "analytes",
+          "location": "Results"
+        },
+        {
+          "name": "CV não calculável por dados ausentes",
+          "value": 5,
+          "unit": "analytes",
+          "location": "Results"
+        },
+        {
+          "name": "exatidão mediana em plasma de referência",
+          "value": 107,
+          "unit": "percent_reference",
+          "location": "Abstract"
+        },
+        {
+          "name": "precisão mediana em plasma de referência",
+          "value": 6.7,
+          "unit": "percent_cv",
+          "location": "Abstract"
+        }
+      ],
+      "limitation": "Resultados específicos de um painel e materiais de referência; não quantificam tecidos individuais.",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "version": 154,
+      "area": "Nutrição",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8338737/",
+      "title": "Overview of Dietary Assessment Methods for Measuring Intakes of Foods, Beverages, and Dietary Supplements in Research Studies",
+      "access": "indexed_excerpt",
+      "role": "methodological_review",
+      "measurements": [],
+      "limitation": "Autorrelato dietético tem erro de medição; biomarcadores de recuperação existem apenas para alguns componentes. Sem extração de efeitos nutricionais.",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "version": 155,
+      "area": "Farmacovigilância",
+      "url": "https://www.fda.gov/drugs/fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard",
+      "title": "FDA Adverse Event Monitoring System (AEMS) Public Dashboard",
+      "access": "indexed_excerpt",
+      "role": "safety_guidance",
+      "measurements": [],
+      "limitation": "Notificação espontânea não estabelece causalidade; duplicidade e ausência de denominador limitam inferências.",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "version": 156,
+      "area": "Toxicologia",
+      "url": "https://doi.org/10.1787/5ba6777b-en",
+      "title": "Guidance Document on Good In Vitro Method Practices (GIVIMP), Second Edition",
+      "access": "indexed_metadata",
+      "role": "safety_guidance",
+      "measurements": [],
+      "limitation": "Diretriz metodológica OECD 2025; resultados in vitro exigem avaliação de aplicabilidade. Não foram extraídos ensaios toxicológicos específicos.",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "version": 157,
+      "area": "Composição tecidual",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39438968/",
+      "title": "Body composition assessment in individuals with class II/III obesity: a narrative review",
+      "access": "indexed_abstract",
+      "role": "methodological_review",
+      "measurements": [],
+      "limitation": "Revisão já registrada como M03/P03; não constitui nova publicação independente. Composição corporal depende de método.",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "version": 158,
+      "area": "Longitudinal",
+      "url": "https://doi.org/10.1002/oby.23415",
+      "title": "Validity of dual-energy x-ray absorptiometry for estimation of visceral adipose tissue and visceral adipose tissue change after surgery-induced weight loss in women with severe obesity",
+      "access": "indexed_abstract_full_text_blocked",
+      "role": "measurement_validation",
+      "measurements": [
+        {
+          "name": "mulheres na amostra analítica",
+          "value": 36,
+          "unit": "participants",
+          "location": "Abstract"
+        },
+        {
+          "name": "último acompanhamento",
+          "value": 24,
+          "unit": "months",
+          "location": "Abstract"
+        }
+      ],
+      "limitation": "Contexto de cirurgia bariátrica; referência P02 já existente. Não extrapolar alterações fisiológicas para outros contextos; texto integral bloqueado nesta consulta.",
+      "rawImported": false,
+      "individualValidation": false
+    },
+    {
+      "version": 159,
+      "area": "Validade externa",
+      "url": "https://www.bmj.com/content/384/bmj-2023-074820",
+      "title": "Evaluation of clinical prediction models (part 2): how to undertake an external validation study",
+      "access": "indexed_excerpt",
+      "role": "methodological_guidance",
+      "measurements": [],
+      "limitation": "Avaliação de ajuste, calibração e discriminação requer dados independentes e modelo definido. Não há validação externa executada.",
+      "rawImported": false,
+      "individualValidation": false
+    }
+  ],
+  "existingReferences": [
+    {
+      "version": 157,
+      "ids": [
+        "M03",
+        "P03"
+      ]
+    },
+    {
+      "version": 158,
+      "ids": [
+        "P02"
+      ]
+    }
+  ],
+  "clinicalValidation": "not_established",
+  "rawDataImported": false,
+  "modelTrained": false,
+  "personalDataIncluded": false,
+  "checkedOn": "2026-11-26",
+  "notes": [
+    "No pooling across studies or analytical units.",
+    "Methodological guidance is not biological evidence of effects.",
+    "No personal or intervention estimates."
+  ]
+}
