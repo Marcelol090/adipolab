@@ -8,6 +8,8 @@ import time
 import tempfile
 import urllib.error
 import urllib.request
+import urllib.parse
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -17,7 +19,9 @@ SOURCES = {
     "PMC3953447": "10.1371/journal.pone.0091586",
 }
 BASE = "https://pmc.ncbi.nlm.nih.gov/tools/idconv/api/v1/articles/"
-SCHEMA = "adipolab.measurement-provenance.v1"
+PUBMED = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+EXPECTED_PMIDS = {"PMC13086945":"41786921","PMC12171921":"40289617","PMC3953447":"24626110"}
+SCHEMA = "adipolab.measurement-provenance.v2"
 MAX_BYTES = 1024 * 1024
 
 def stamp():
@@ -26,7 +30,7 @@ def stamp():
 def fetch(url, opener=urllib.request.urlopen, sleeper=time.sleep):
     for attempt in range(3):
         try:
-            request=urllib.request.Request(url,headers={"User-Agent":"AdipoLab measurement provenance audit","Accept":"application/json"})
+            request=urllib.request.Request(url,headers={"User-Agent":"AdipoLab measurement provenance audit","Accept":"application/json, application/xml, text/xml"})
             with opener(request,timeout=10) as response:
                 content=response.read(MAX_BYTES+1)
             if len(content)>MAX_BYTES:raise ValueError("Response exceeds limit")
@@ -54,7 +58,7 @@ def verify_mapping(raw):
         doi=norm(r.get("doi"))
         if not re.fullmatch(r"[1-9][0-9]*",pmid) or not re.fullmatch(r"10\.[0-9]{4,9}/[^\s]+",doi):raise ValueError("Incomplete crosswalk")
         expected=SOURCES[pmc]
-        if expected is not None and doi!=expected:raise ValueError("DOI mismatch")
+        if doi!=expected or pmid!=EXPECTED_PMIDS[pmc]:raise ValueError("Identifier mismatch")
         out[pmc]={"pmcid":pmc,"pmid":pmid,"doi":doi}
     if set(out)!=set(SOURCES):raise ValueError("Incomplete source coverage")
     return out
@@ -73,6 +77,30 @@ def verify_crossref(raw, doi):
         if v and any(a in k.lower() for a in ("retract","concern","withdraw","correct","update")):flags.append(k)
     return sorted(set(flags))
 
+def verify_pubmed(raw):
+    root=ET.fromstring(raw)
+    if root.tag!="PubmedArticleSet":raise ValueError("Unexpected PubMed response")
+    out={}
+    for article in root.findall("./PubmedArticle"):
+        pmid=article.findtext("./MedlineCitation/PMID")
+        if pmid not in EXPECTED_PMIDS.values() or pmid in out:raise ValueError("Unexpected or duplicate PMID")
+        ids=article.findall("./PubmedData/ArticleIdList/ArticleId")
+        doi={norm(x.text) for x in ids if x.get("IdType")=="doi"}
+        pmc=next(k for k,v in EXPECTED_PMIDS.items() if v==pmid)
+        if doi!={SOURCES[pmc]}:raise ValueError("PubMed DOI mismatch")
+        links=[]
+        for node in article.findall("./MedlineCitation/CommentsCorrectionsList/CommentsCorrections"):
+            t=node.get("RefType","")
+            if any(k in t.lower() for k in ("retract","concern","erratum","correct","republish","withdraw")):
+                links.append(t)
+        for node in article.findall("./MedlineCitation/Article/PublicationTypeList/PublicationType"):
+            t=node.text or ""
+            if any(k in t.lower() for k in ("retract","concern","erratum","correct","republish","withdraw")):
+                links.append(t)
+        out[pmid]=sorted(set(links))
+    if set(out)!=set(EXPECTED_PMIDS.values()):raise ValueError("Incomplete PubMed coverage")
+    return out
+
 def atomic_write(path, content):
     path.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.NamedTemporaryFile(dir=path.parent,delete=False) as f:
@@ -83,16 +111,15 @@ def atomic_write(path, content):
 
 def store_blob(cache, content):
     digest=hashlib.sha256(content).hexdigest()
-    path=cache/"blobs"/(digest+".json")
+    path=cache/"blobs"/(digest+".blob")
     if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest()!=digest:
         atomic_write(path,content)
     return digest
 
 def run(cache, fetcher=fetch):
     cache.mkdir(parents=True,exist_ok=True)
-    summary={"schema":SCHEMA,"retrieved_at":stamp(),"sources":[],"clinical_validation":False,"scope":"identifier and Crossref metadata checks only"}
+    summary={"schema":SCHEMA,"retrieved_at":stamp(),"sources":[],"clinical_validation":False,"scope":"identifier, Crossref and PubMed metadata checks only"}
     try:
-        import urllib.parse
         u=BASE+"?"+urllib.parse.urlencode({"ids":",".join(SOURCES),"format":"json"})
         raw=fetcher(u);mapping=verify_mapping(raw)
         summary["idconv_sha256"]=store_blob(cache,raw)
@@ -107,7 +134,17 @@ def run(cache, fetcher=fetch):
             r.update(status="metadata_checked",editorial_links=flags,sha256=store_blob(cache,raw))
         except Exception as e:r["error"]=type(e).__name__
         summary["sources"].append(r)
-    summary["status"]="complete" if all(r["status"]=="metadata_checked" for r in summary["sources"]) else "partial"
+    try:
+        url=PUBMED+"?"+urllib.parse.urlencode({"db":"pubmed","id":",".join(EXPECTED_PMIDS.values()),"retmode":"xml"})
+        raw=fetcher(url);pubmed=verify_pubmed(raw)
+        summary["pubmed_sha256"]=store_blob(cache,raw)
+        for r in summary["sources"]:
+            r["pubmed_editorial_links"]=pubmed[r["pmid"]]
+    except Exception as e:
+        summary["pubmed_error"]=type(e).__name__
+    summary["status"]="complete" if "pubmed_sha256" in summary and all(r["status"]=="metadata_checked" for r in summary["sources"]) else "partial"
+    for r in summary["sources"]:
+        r["editorial_review_required"]=bool(r.get("editorial_links") or r.get("pubmed_editorial_links")) or r["status"]!="metadata_checked" or "pubmed_editorial_links" not in r
     return summary
 
 def refresh(cache, fetcher=fetch):
