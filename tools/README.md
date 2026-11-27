@@ -23,7 +23,7 @@ Browser regression test (requires Playwright and a local Chromium or Chrome):
 Checks four viewport widths in light and dark mode, synthetic imports, rejection, reset, overflow, and absence of external requests or storage writes.
 
 
-Measurement-source metadata refresh (three fixed public studies; no personal information):
+Measurement-source metadata refresh (three fixed public studies; PMC ID Converter, Crossref and PubMed; no personal information):
 
     python tools/refresh_measurement_provenance.py PATH_TO_LOCAL_CACHE
 
@@ -40,3 +40,9 @@ Private shell regression (Playwright, local Chromium or Chrome):
 This test compares the existing ciphertext and IV with the original v12 commit, then exercises the real browser AES-GCM flow with an ephemeral synthetic payload and synthetic key. It checks failed authentication, successful synthetic unlock, the clinical-validity notice and its evidence link. It does not decrypt the actual private application.
 
 Release checks: run the Python export and provenance tests, Node validation, both browser tests and git diff --check. A passing release check does not validate the clinical protocol or recover the missing original SQLite archive.
+
+Regenerate the public source snapshot only after a successful refresh:
+
+    python tools/publish_measurement_snapshot.py PATH_TO_LOCAL_CACHE evidence.html
+
+The publisher independently recomputes hashes, verifies identifiers and editorial fields from the raw blobs, refuses incomplete latest attempts, and displays review requirements when flags exist. It does not ship raw XML/JSON, the private database, keys or participant data. This is a limited bibliographic check, not a full retraction or clinical audit.
