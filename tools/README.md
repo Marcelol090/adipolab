@@ -32,3 +32,11 @@ The output distinguishes complete, partial and failed retrievals. Raw responses 
 Regression tests:
 
     python tools/test_measurement_provenance.py
+
+Private shell regression (Playwright, local Chromium or Chrome):
+
+    python tools/test_private_shell.py
+
+This test compares the existing ciphertext and IV with the original v12 commit, then exercises the real browser AES-GCM flow with an ephemeral synthetic payload and synthetic key. It checks failed authentication, successful synthetic unlock, the clinical-validity notice and its evidence link. It does not decrypt the actual private application.
+
+Release checks: run the Python export and provenance tests, Node validation, both browser tests and git diff --check. A passing release check does not validate the clinical protocol or recover the missing original SQLite archive.
