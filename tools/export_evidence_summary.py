@@ -1,20 +1,37 @@
 """Export only aggregate audit counts, never publication contents or participant data."""
 import argparse
+import hashlib
+import re
 import json
 import sqlite3
 from contextlib import closing
 from pathlib import Path
 
+def file_sha256(path: Path):
+    with path.open("rb") as stream:
+        return hashlib.file_digest(stream, "sha256").hexdigest()
+
 def export_summary(db: Path, manifest: Path):
     m = json.loads(manifest.read_text(encoding="utf-8"))
     if m.get("version") != "v190":
         raise ValueError("Expected v190 manifest")
+    if not db.is_file():
+        raise FileNotFoundError(db)
+    expected = m.get("hashes", {}).get(db.name)
+    if not isinstance(expected, str) or not re.fullmatch("[a-fA-F0-9]{64}", expected):
+        raise ValueError("Missing or invalid database SHA-256 in manifest")
+    if any(Path(str(db) + suffix).exists() for suffix in ("-wal", "-journal")):
+        raise ValueError("Database must be a closed, checkpointed snapshot")
+    if file_sha256(db) != expected.lower():
+        raise ValueError("Database SHA-256 differs from manifest")
     with closing(sqlite3.connect(db.resolve().as_uri() + "?mode=ro", uri=True)) as c:
         if c.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
             raise ValueError("SQLite integrity check failed")
         count, quarantine = c.execute("SELECT COUNT(*), COALESCE(SUM(CASE WHEN quarantine=1 THEN 1 ELSE 0 END),0) FROM publication").fetchone()
         if c.execute("SELECT COUNT(*) FROM publication WHERE quarantine IS NULL OR quarantine NOT IN (0,1) OR clinically_validated IS NULL OR clinically_validated != 0").fetchone()[0]:
             raise ValueError("Unexpected publication status")
+    if file_sha256(db) != expected.lower():
+        raise ValueError("Database changed during export")
     if count != m["publication_count"] or quarantine != m["quarantine_count"]:
         raise ValueError("Database and manifest disagree")
     checks = m["checks"]

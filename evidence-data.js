@@ -15,6 +15,10 @@
   if (typeof module !== "undefined" && module.exports) module.exports = {validate};
   if (!root.document) return;
   const doc=root.document, status=doc.getElementById("snapshot-status"), file=doc.getElementById("snapshot-file");
+  const reset=doc.getElementById("snapshot-reset");
+  const historical=Object.fromEntries(["publications","links","quarantine","checks"].map(k=>[k,doc.querySelector('[data-metric="'+k+'"]').textContent]));
+  const historicalStatus=status.textContent;
+  let request=0;
   const format=n=>n.toLocaleString("pt-BR");
   function render(data) {
     const x=validate(data);
@@ -23,9 +27,19 @@
     status.textContent="Resumo importado; estrutura e totais conferidos no navegador. A origem do arquivo não é autenticada pelo navegador. Não representa validação clínica.";
   }
   file.addEventListener("change",async()=>{
-    const f=file.files[0]; if(!f)return;
-    try {if(f.size>65536)throw new Error("Arquivo excede 64 KB.");render(JSON.parse(await f.text()));}
-    catch(e){status.textContent="Importação recusada: "+e.message+" Os indicadores anteriores foram mantidos.";}
-    finally{file.value="";}
+    const token=++request,f=file.files[0]; if(!f)return;
+    try {
+      if(f.size>65536)throw new Error("Arquivo excede 64 KB.");
+      const text=await f.text();
+      if(token===request)render(JSON.parse(text));
+    }
+    catch(e){if(token===request)status.textContent="Importação recusada: "+e.message+" Os indicadores anteriores foram mantidos.";}
+    finally{if(token===request)file.value="";}
+  });
+  reset.addEventListener("click",()=>{
+    request++;
+    file.value="";
+    for(const [key,value] of Object.entries(historical))doc.querySelector('[data-metric="'+key+'"]').textContent=value;
+    status.textContent=historicalStatus;
   });
 })(typeof globalThis!=="undefined"?globalThis:this);
