@@ -1,0 +1,11 @@
+const assert=require("node:assert/strict"),vm=require("node:vm"),fs=require("node:fs"),path=require("node:path");
+const {validate}=require("../evidence-data.js");
+const base={schema:"adipolab.audit-summary.v1",audit_version:"v190",publication_count:2,quarantine_count:1,registry_links_resolved:3,registry_links_total:3,checks_passed:1,checks_total:2};
+assert.deepEqual(validate(base),base);
+for(const invalid of [{...base,quarantine_count:3},{...base,checks_passed:3},{...base,registry_links_resolved:4},{...base,publication_count:-1},{...base,publication_count:"2"},{...base,audit_version:"v189"},{...base,patient:"secret"},{...base,publication_count:NaN},null])assert.throws(()=>validate(invalid));
+let listener;const status={textContent:""};const file={files:[],value:"",addEventListener:(e,f)=>{assert.equal(e,"change");listener=f}};
+const metrics=Object.fromEntries(["publications","links","quarantine","checks"].map(k=>[k,{textContent:"original"}]));
+let resetHandler;const reset={addEventListener:(e,f)=>{assert.equal(e,"click");resetHandler=f}};
+const doc={getElementById:id=>id==="snapshot-status"?status:id==="snapshot-reset"?reset:file,querySelector:q=>metrics[q.split('"')[1]]};
+vm.runInNewContext(fs.readFileSync(path.join(__dirname,"../evidence-data.js"),"utf8"),{document:doc});
+(async()=>{file.files=[{size:100,text:async()=>JSON.stringify(base)}];await listener();assert.equal(metrics.links.textContent,"3/3");assert.equal(metrics.publications.textContent,"2");assert.match(status.textContent,/não é autenticada/);file.files=[{size:100,text:async()=>JSON.stringify({...base,quarantine_count:3})}];await listener();assert.equal(metrics.quarantine.textContent,"1");assert.match(status.textContent,/recusada/);file.files=[{size:65537,text:async()=>{throw new Error("must not read")}}];await listener();assert.match(status.textContent,/64 KB/);resetHandler();assert.equal(metrics.publications.textContent,"original");let resolve;file.files=[{size:100,text:()=>new Promise(r=>{resolve=r})}];const pending=listener();resetHandler();resolve(JSON.stringify(base));await pending;assert.equal(metrics.publications.textContent,"original");console.log("PASS validation, import, rejection, reset and stale-file race guard");})().catch(e=>{console.error(e);process.exitCode=1});
