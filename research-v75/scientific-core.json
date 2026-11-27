@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "version": "2.0.0-alpha.1",
+  "scope": "aggregate_analytical_qc",
+  "study": "ST005210",
+  "source": "https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST005210",
+  "tissue": "epicardial_adipose",
+  "software": "XCMS 4.12.0",
+  "reports": {
+    "equivalence": {
+      "sha256": "2fc4751303949f76cf2a506a5712e4da83b44d8da0f888ab6dfe9fdbeb905bc1",
+      "status": "REVIEW"
+    },
+    "repair": {
+      "sha256": "1bface4e316b176e5a794b9ec89a5a0461bcc71cdef9272e3f853c5bcd22832b",
+      "status": "PASS"
+    }
+  },
+  "master": {
+    "passed": 16,
+    "total": 16,
+    "inputsUnchanged": true
+  },
+  "modes": [
+    {
+      "mode": "NEG",
+      "pairs": 57,
+      "passed": 57,
+      "points": 577013700,
+      "scans": 67374,
+      "extraFunction2": 4218,
+      "missingScans": 0,
+      "unpairedRaw": 7,
+      "studyQcFiles": 55,
+      "calibrationFiles": 2,
+      "studyQcPeaks": 242309,
+      "calibrationPeaks": 7126,
+      "groups": 1046,
+      "finiteCells": 57530,
+      "missingCells": 0,
+      "replayPassed": 7,
+      "replayTotal": 7,
+      "warningMinimum": 30,
+      "warningExact": true,
+      "archiveSha256": "5f30990dab1851570f206d049dea0f9021dcf576285b76568d7277019faf6862",
+      "ipoSha256": "87baa4760dcfc49314943adc48520b40ad7b3639a99e2e3279ff0d8cccdb1f50"
+    },
+    {
+      "mode": "POS",
+      "pairs": 57,
+      "passed": 57,
+      "points": 673659124,
+      "scans": 67374,
+      "extraFunction2": 4218,
+      "missingScans": 0,
+      "unpairedRaw": 7,
+      "studyQcFiles": 55,
+      "calibrationFiles": 2,
+      "studyQcPeaks": 310868,
+      "calibrationPeaks": 9037,
+      "groups": 3830,
+      "finiteCells": 210650,
+      "missingCells": 0,
+      "replayPassed": 7,
+      "replayTotal": 7,
+      "warningMinimum": 50,
+      "warningExact": false,
+      "archiveSha256": "10511507d3c7283db70077ef11f5bac52ebae5835d46d1eb80cb86b017384865",
+      "ipoSha256": "4c8bf00b2414c741fe0872a6814079b6625ada8aa0061e4643d0b52ec494afb6"
+    }
+  ],
+  "limitations": {
+    "rawDataPublished": false,
+    "matrixPersisted": false,
+    "warningDetailsCaptured": false,
+    "historicalReproduction": false,
+    "independentMolecularIdentity": false,
+    "independentBiologicalValidation": false,
+    "individualPrediction": false
+  },
+  "note": "Local report aggregates transcribed and reconciled; report SHA-256 values identify local files, not public copies. Four Metmix controls detected separately; technical archive groups retained. No molecular identity or causal inference."
+}
