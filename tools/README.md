@@ -52,3 +52,15 @@ Verified archive publication (local, read-only source files):
     python tools/publish_verified_audit.py PATH_TO_V190 PATH_TO_V170 evidence.html
 
 This verifies all four v190 manifest hashes, the v170 registry CSV hash, unique registry edges and PMID coverage, the archived measurement and safety reports against SQLite, and the archive counts. It regenerates the public aggregate section and dashboard counts. No database, titles, individual data or raw research material are published. Rerun when a new verified snapshot is needed; there is no continuous server-side connection to the local database.
+
+
+## v191 — Bibliographic API control
+
+Run with Node.js 20+:
+
+```sh
+node tools/audit_api_controls.mjs --self-test
+node tools/audit_api_controls.mjs PATH_TO_LOCAL_CACHE
+```
+
+Uses a fixed public methodological article (TRIPOD+AI, PMID 38626948, DOI 10.1136/bmj-2023-078378) to test identity agreement in Crossref, Europe PMC and PubMed ESummary. No personal data, intervention search or automatic changes to the evidence catalogue. HTTP failures, timeouts, malformed responses and identity mismatches are not successes; a partial result exits nonzero. Crossref update-to flags require editorial review. Matching records are not independent studies, and absent flags do not prove absence of retraction. The local result contains timestamp, statuses and response hashes, not raw response bodies; hashes alone are not independently reproducible without the original bodies. The dashboard does not perform live API calls or display the local probe as an automatically verified result. Do not commit local cache files. Fixture tests are not live API tests.
