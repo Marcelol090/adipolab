@@ -49,11 +49,16 @@ async function probe(source,url){
   return {source,...inspect(source,JSON.parse(bytes.toString("utf8"))),response_sha256:createHash("sha256").update(bytes).digest("hex")};
  }catch(e){return {source,status:"unverified",error:e.name}}
 }
-if(process.argv.includes("--self-test")){console.log("Fixture cases passed:",selfTest()+testEditorial(assessEditorial,editorialTests))}
+function transient(r){return (r.status==="unverified"&&["TimeoutError","AbortError"].includes(r.error))||(r.status==="http_error"&&[500,502,503,504].includes(r.http_status))}
+async function retryProbe(source,url,run=probe,delay=ms=>new Promise(resolve=>setTimeout(resolve,ms))){
+ const attempts=[];for(let i=0;i<3;i++){const r=await run(source,url);attempts.push({...r});if(!transient(r)||i===2)return {...r,attempts};await delay(1000*(i+1))}
+}
+async function testRetries(){let count=0;const timeout={status:"unverified",error:"TimeoutError"},matched={status:"matched"},invalid={status:"unverified",error:"SyntaxError"},rate={status:"http_error",http_status:429},unavailable={status:"http_error",http_status:503};for(const [seq,n,expected] of [[[timeout,matched],2,"matched"],[[timeout,timeout,timeout],3,"unverified"],[[invalid,matched],1,"unverified"],[[rate,matched],1,"http_error"],[[unavailable,matched],2,"matched"],[[matched],1,"matched"]]){let i=0,waits=0;const r=await retryProbe("fixture","fixture",async()=>seq[i++],async()=>{waits++});if(i!==n||r.attempts.length!==n||waits!==n-1||r.status!==expected)throw Error("Retry regression");count++}return count}
+if(process.argv.includes("--self-test")){console.log("Fixture cases passed:",selfTest()+testEditorial(assessEditorial,editorialTests)+await testRetries())}
 else{
  const dir=process.argv[2];if(!dir)throw new Error("Usage: node tools/audit_api_controls.mjs LOCAL_CACHE_DIRECTORY");
- const results=await Promise.all(Object.entries(endpoints).map(([s,u])=>probe(s,u)));
- const summary={schema:"adipolab.api-control.v2",retrieved_at:new Date().toISOString(),control,results,editorial:assessEditorial(results,[knownNotice]),status:results.every(r=>r.status==="matched")?"complete":"partial",clinical_validation:false};
+ const results=await Promise.all(Object.entries(endpoints).map(([s,u])=>retryProbe(s,u)));
+ const summary={schema:"adipolab.api-control.v3",retrieved_at:new Date().toISOString(),control,results,editorial:assessEditorial(results,[knownNotice]),status:results.every(r=>r.status==="matched")?"complete":"partial",clinical_validation:false};
  await mkdir(resolve(dir),{recursive:true});
  const filename=resolve(dir,"latest_api_control.json"),tmp=filename+"."+process.pid+".tmp";
  await writeFile(tmp,JSON.stringify(summary,null,2),{flag:"wx"});await rename(tmp,filename);
