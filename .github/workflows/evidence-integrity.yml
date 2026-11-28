@@ -1,0 +1,39 @@
+name: Evidence integrity regression
+on:
+  pull_request:
+    paths:
+      - 'tools/**'
+      - 'evidence.html'
+      - 'evidence-data.js'
+      - '.github/workflows/evidence-integrity.yml'
+  push:
+    branches:
+      - audit-api-controls-v191
+    paths:
+      - 'tools/**'
+      - 'evidence.html'
+      - 'evidence-data.js'
+      - '.github/workflows/evidence-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  structural:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python3 tools/test_export_evidence_summary.py
+      - run: python3 tools/test_measurement_provenance.py
+      - run: python3 tools/test_publish_measurement_snapshot.py
+      - run: node tools/test_evidence_data.cjs
+      - run: node tools/audit_api_controls.mjs --self-test
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python3 -m venv "$RUNNER_TEMP/evidence-env"
+      - run: '"$RUNNER_TEMP/evidence-env/bin/python" -m pip install playwright==1.56.0'
+      - run: '"$RUNNER_TEMP/evidence-env/bin/python" -m playwright install --with-deps chromium'
+      - run: '"$RUNNER_TEMP/evidence-env/bin/python" tools/test_evidence_browser.py'

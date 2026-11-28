@@ -1,0 +1,31 @@
+name: Bibliographic API controls
+on:
+  pull_request:
+    paths:
+      - 'tools/audit_api_controls.mjs'
+      - '.github/workflows/bibliographic-controls.yml'
+  push:
+    branches:
+      - audit-api-controls-v191
+    paths:
+      - 'tools/audit_api_controls.mjs'
+      - '.github/workflows/bibliographic-controls.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixtures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: node --version
+      - run: node --check tools/audit_api_controls.mjs
+      - run: node tools/audit_api_controls.mjs --self-test
+  public-api-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    needs: fixtures
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: node tools/audit_api_controls.mjs "${RUNNER_TEMP}/adipolab-public-api-control"
