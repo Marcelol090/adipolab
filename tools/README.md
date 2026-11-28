@@ -64,3 +64,8 @@ node tools/audit_api_controls.mjs PATH_TO_LOCAL_CACHE
 ```
 
 Uses a fixed public methodological article (TRIPOD+AI, PMID 38626948, DOI 10.1136/bmj-2023-078378) to test identity agreement in Crossref, Europe PMC and PubMed ESummary. No personal data, intervention search or automatic changes to the evidence catalogue. HTTP failures, timeouts, malformed responses and identity mismatches are not successes; a partial result exits nonzero. Crossref update-to flags require editorial review. Matching records are not independent studies, and absent flags do not prove absence of retraction. The local result contains timestamp, statuses and response hashes, not raw response bodies; hashes alone are not independently reproducible without the original bodies. The dashboard does not perform live API calls or display the local probe as an automatically verified result. Do not commit local cache files. Fixture tests are not live API tests.
+
+
+### v192 — Editorial control and network status
+
+The reference has a documented correction to author affiliations (BMJ q902, DOI 10.1136/bmj.q902, PMID 38636956). Source: https://www.bmj.com/content/385/bmj.q902 and https://pubmed.ncbi.nlm.nih.gov/38636956/. The v2 result records this as a documentary notice, not as a live API finding. Editorial review is independent of identifier matching. An empty Crossref update list does not clear a known correction or establish retraction status. The correction is not itself a retraction. Five new regression cases cover these distinctions. Direct API retrieval was not verified in this audit environment (DNS/access blocked); do not treat the documentary check as a live probe. The prior v190 counts remain unchanged.
