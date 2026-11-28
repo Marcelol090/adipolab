@@ -69,3 +69,10 @@ Uses a fixed public methodological article (TRIPOD+AI, PMID 38626948, DOI 10.113
 ### v192 — Editorial control and network status
 
 The reference has a documented correction to author affiliations (BMJ q902, DOI 10.1136/bmj.q902, PMID 38636956). Source: https://www.bmj.com/content/385/bmj.q902 and https://pubmed.ncbi.nlm.nih.gov/38636956/. The v2 result records this as a documentary notice, not as a live API finding. Editorial review is independent of identifier matching. An empty Crossref update list does not clear a known correction or establish retraction status. The correction is not itself a retraction. Five new regression cases cover these distinctions. Direct API retrieval was not verified in this audit environment (DNS/access blocked); do not treat the documentary check as a live probe. The prior v190 counts remain unchanged.
+
+
+### v193 — Observed remote probe and bounded retries
+
+At commit 07851a2, both CI fixture jobs passed all 20 cases. Run 46095485888 matched 3/3 sources; run 46095481766 matched Crossref and PubMed but Europe PMC timed out. See https://github.com/Marcelol090/adipolab/actions/runs/46095485888 and https://github.com/Marcelol090/adipolab/actions/runs/46095481766. Neither result measures long-term availability. Crossref returned no update-to flag despite the documentary correction; review remains required.
+
+Schema v3 records each attempt, with up to three attempts for timeouts or HTTP 500/502/503/504 and short bounded waits. No automatic retry for 429, malformed responses, or identifier mismatches. Six synthetic retry cases passed in isolation; the new commit still requires its own remote CI. No clinical or catalog-wide validation is implied.
