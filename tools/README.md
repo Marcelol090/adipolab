@@ -52,3 +52,12 @@ Verified archive publication (local, read-only source files):
     python tools/publish_verified_audit.py PATH_TO_V190 PATH_TO_V170 evidence.html
 
 This verifies all four v190 manifest hashes, the v170 registry CSV hash, unique registry edges and PMID coverage, the archived measurement and safety reports against SQLite, and the archive counts. It regenerates the public aggregate section and dashboard counts. No database, titles, individual data or raw research material are published. Rerun when a new verified snapshot is needed; there is no continuous server-side connection to the local database.
+
+Archived nutrition-guide review (read-only; no diets, targets or personal data exported):
+
+    python tools/audit_nutrition_source.py PATH_TO_ARCHIVED_GUIDE PATH_TO_NEW_LOCAL_REPORT.json
+    python tools/test_audit_nutrition_source.py
+
+This is a structural marker scan, not a clinical or nutritional assessment. The archived v4 guide contained explicit C0–C3 objects. The v5 guide contains C0–C9 text markers; the scanner does not establish independent diet structures from those labels. The scanner never executes the archived JavaScript. Do not commit private source documents or personal data.
+
+Nutrition review gate: structural markers must not promote any cycle to clinically validated or nutritionally assessed. Run python tools/test_nutrition_review_gate.py. No caloric target, meal plan or intervention is calculated.
