@@ -21,8 +21,9 @@ def inspect(raw):
     identifiers=set(re.findall(r"\b(?:const|let|var|function)\s+([A-Za-z_$][\w$]*)",text))
     block=re.search(r"\bconst\s+CYCLES_DATA\s*=([\s\S]*?)(?=\n\s*(?:const|let|var|function)\s+|</script>)",text)
     cycles=sorted(set(int(n) for n in re.findall(r"(?<![\w])c([0-9])\s*:\s*\{",block.group(1),re.I))) if block else []
+    labels=sorted(set(int(n) for n in re.findall(r"\bciclo\s*([0-9])\b",text,re.I)))
     refs=set(re.findall(r"https?://(?:pubmed\.ncbi\.nlm\.nih\.gov|pmc\.ncbi\.nlm\.nih\.gov|doi\.org)/[^\s\"'<>]+",text,re.I))
-    return {"schema":"adipolab.nutrition-source-review.v1","source_sha256":hashlib.sha256(raw).hexdigest(),"scope":"structural source inspection only","meal_structure_present":"MEALS" in identifiers,"energy_calculation_present":"calcTargets" in identifiers,"diet_view_present":"view-dieta" in parser.sections,"cycle_data_present":block is not None,"explicit_cycle_ids":["C"+str(n) for n in cycles],"direct_scientific_identifier_links":len(refs),"clinical_validation":False,"nutritional_adequacy_verified":False,"current_encrypted_version_verified":False}
+    return {"schema":"adipolab.nutrition-source-review.v2","source_sha256":hashlib.sha256(raw).hexdigest(),"scope":"structural source inspection only","meal_structure_present":"MEALS" in identifiers,"energy_calculation_present":"calcTargets" in identifiers,"diet_view_present":"view-dieta" in parser.sections,"cycle_data_present":block is not None,"explicit_cycle_ids":["C"+str(n) for n in cycles],"cycle_label_markers":["C"+str(n) for n in labels],"direct_scientific_identifier_links":len(refs),"clinical_validation":False,"nutritional_adequacy_verified":False,"current_encrypted_version_verified":False}
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
