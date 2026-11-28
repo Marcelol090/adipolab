@@ -59,3 +59,5 @@ Archived nutrition-guide review (read-only; no diets, targets or personal data e
     python tools/test_audit_nutrition_source.py
 
 This is a structural marker scan, not a clinical or nutritional assessment. The archived v4 guide contained explicit C0–C3 objects. The v5 guide contains C0–C9 text markers; the scanner does not establish independent diet structures from those labels. The scanner never executes the archived JavaScript. Do not commit private source documents or personal data.
+
+Nutrition review gate: structural markers must not promote any cycle to clinically validated or nutritionally assessed. Run python tools/test_nutrition_review_gate.py. No caloric target, meal plan or intervention is calculated.
